@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import Learn from "./components/Learn";
 import Home from "./components/Home";
-import Modal from "./components/Modal";
 import data from "./data/data.json";
 import "./App.css";
 
@@ -19,7 +18,6 @@ function App() {
   const [options, setOptions] = useState({ newCards: 5 });
   const [currentPage, setCurrentPage] = useState("home");
   const [learnCards, setLearnCards] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   let learnCardsData = useRef([]);
   let cardsData = useRef(JSON.parse(localStorage.getItem("cardsData")) || {})
 
@@ -60,7 +58,6 @@ function App() {
           ></Learn>
         )}
       </div>
-      {isModalOpen && <Modal></Modal>}
     </>
   );
 }
