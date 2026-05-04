@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "word": "勇気",
+    "translation": "Courage",
+    "example_sentence": "新しいことに挑戦するには勇気が必要です。"
+  },
+  {
+    "id": 2,
+    "word": "訪れる",
+    "translation": "To visit",
+    "example_sentence": "いつか京都を訪れたいと思っています。"
+  },
+  {
+    "id": 3,
+    "word": "穏やか",
+    "translation": "Calm / Gentle",
+    "example_sentence": "今日は風がなくて、とても穏やかな海です。"
+  },
+  {
+    "id": 4,
+    "word": "経験",
+    "translation": "Experience",
+    "example_sentence": "海外での生活は良い経験になりました。"
+  },
+  {
+    "id": 5,
+    "word": "守る",
+    "translation": "To protect / To keep (a promise)",
+    "example_sentence": "約束は必ず守らなければなりません。"
+  },
+  {
+    "id": 6,
+    "word": "不思議",
+    "translation": "Strange / Wondrous",
+    "example_sentence": "昨晩、とても不思議な夢を見ました。"
+  },
+  {
+    "id": 7,
+    "word": "歴史",
+    "translation": "History",
+    "example_sentence": "このお寺は長い歴史を持っています。"
+  },
+  {
+    "id": 8,
+    "word": "選ぶ",
+    "translation": "To choose",
+    "example_sentence": "好きなデザートを一から選んでください。"
+  },
+  {
+    "id": 9,
+    "word": "新鮮",
+    "translation": "Fresh",
+    "example_sentence": "市場で新鮮な魚を買ってきました。"
+  },
+  {
+    "id": 10,
+    "word": "感謝",
+    "translation": "Gratitude / Thanks",
+    "example_sentence": "家族の支えにいつも感謝しています。"
+  }
+]
