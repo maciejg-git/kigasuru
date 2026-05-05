@@ -20,6 +20,7 @@ function App() {
   const [learnCards, setLearnCards] = useState([]);
   let learnCardsData = useRef([]);
   let cardsData = useRef(JSON.parse(localStorage.getItem("cardsData")) || {})
+  let learnCount = useRef(localStorage.getItem("learnCount") || 0)
 
   function handleClickStart() {
     let cards = calculateLearnCards(cardsData.current, options.newCards);
@@ -40,8 +41,10 @@ function App() {
   }
 
   function handleLearnFinished() {
-    let newCardsData = {...cardsData.current, ...learnCardsData.current}
-    // localStorage.setItem("cardsData", JSON.stringify(newCardsData))
+    cardsData.current = {...cardsData.current, ...learnCardsData.current}
+    localStorage.setItem("learnCount", learnCount.current++)
+    setCurrentPage("home")
+    localStorage.setItem("cardsData", JSON.stringify(cardsData.current))
   }
 
   return (
