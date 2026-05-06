@@ -1,65 +1,99 @@
 import { useState, useRef, useEffect } from "react";
 import Learn from "./components/Learn";
 import Home from "./components/Home";
+import Deck from "./components/Deck";
+import Options from "./components/Options";
+import Button from "./components/Button";
 import data from "./data/data.json";
 import "./App.css";
-
-function calculateLearnCards(cardsData, newCardsLimit) {
-  let newCards = data
-    .filter((card) => {
-      return !cardsData[card.id]
-    })
-    .splice(0, newCardsLimit);
-
-  return newCards;
-}
+import { calculateLearnCards, getCardDue } from "./srs";
+import { OptionsContext } from "./options-context";
 
 function App() {
   const [options, setOptions] = useState({ newCards: 5 });
-  const [currentPage, setCurrentPage] = useState("home");
+  const [page, setPage] = useState("home");
   const [learnCards, setLearnCards] = useState([]);
-  let learnCardsData = useRef([]);
-  let cardsData = useRef(JSON.parse(localStorage.getItem("cardsData")) || {})
-  let learnCount = useRef(localStorage.getItem("learnCount") || 0)
+  let currentSrsData = useRef([]);
+  let deckSrsData = useRef(
+    JSON.parse(localStorage.getItem("deckSrsData")) || {}
+  );
+  let today = new Date();
+  today.setUTCHours(0, 0, 0, 0);
 
   function handleClickStart() {
-    let cards = calculateLearnCards(cardsData.current, options.newCards);
+    let cards = calculateLearnCards(
+      data,
+      deckSrsData.current,
+      today,
+      options.newCards
+    );
+    if (!cards.length) {
+      return;
+    }
     setLearnCards(cards);
-    setCurrentPage("learn");
+    setPage("learn");
+  }
+
+  function handleClickOptions() {
+    if (page === "home") {
+      setPage("options");
+    } else {
+      setPage("home")
+    }
   }
 
   function handleCardDataUpdate(card, action) {
-    if (!cardsData.current[card.id]) {
-      learnCardsData.current[card.id] = {...card, repeated: 0}
+    if (!deckSrsData.current[card.id]) {
+      currentSrsData.current[card.id] = { ...card, reviewed: 0, due: null };
     } else {
-      learnCardsData.current[card.id] = {...cardsData.current[card.id]}
+      currentSrsData.current[card.id] = { ...deckSrsData.current[card.id] };
     }
 
-    if (action === "repeated") {
-      learnCardsData.current[card.id].repeated++;
+    if (action === "reviewed") {
+      currentSrsData.current[card.id].reviewed++;
+      currentSrsData.current[card.id].due = getCardDue(
+        currentSrsData.current[card.id],
+        today
+      ).getTime();
     }
   }
 
   function handleLearnFinished() {
-    cardsData.current = {...cardsData.current, ...learnCardsData.current}
-    localStorage.setItem("learnCount", learnCount.current++)
-    setCurrentPage("home")
-    localStorage.setItem("cardsData", JSON.stringify(cardsData.current))
+    deckSrsData.current = { ...deckSrsData.current, ...currentSrsData.current };
+    setPage("home");
+    localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
+  }
+
+  function handleClickDeck() {
+    setPage("deck");
   }
 
   return (
     <>
+      <div className="flex px-4 py-2 items-center justify-between">
+        <span className="text-2xl font-semibold">Japan</span>
+        <button onClick={handleClickOptions} className="font-semibold">Options</button>
+      </div>
       <div className="mx-auto h-screen max-w-4xl">
-        {currentPage === "home" && (
-          <Home onClickStart={handleClickStart} data={data} cardsData={cardsData}></Home>
-        )}
-        {currentPage === "learn" && (
-          <Learn
-            cards={learnCards}
-            onCardDataUpdate={handleCardDataUpdate}
-            onLearnFinish={handleLearnFinished}
-          ></Learn>
-        )}
+        <OptionsContext value={options}>
+          {page === "home" && (
+            <Home
+              onClickStart={handleClickStart}
+              onClickDeck={handleClickDeck}
+              data={data}
+              deckSrsData={deckSrsData}
+            ></Home>
+          )}
+          {page === "learn" && (
+            <Learn
+              cards={learnCards}
+              onCardDataUpdate={handleCardDataUpdate}
+              onLearnFinish={handleLearnFinished}
+            ></Learn>
+          )}
+          {page === "deck" && <Deck deck={data}></Deck>}
+          {page === "options" && <Options options={options} setOptions={setOptions}></Options>}
+        </OptionsContext>
       </div>
     </>
   );

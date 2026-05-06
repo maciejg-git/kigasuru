@@ -1,12 +1,8 @@
 export default function JapaneseExample({ example }) {
   return (
-    <div className="p-10 rounded-xl bg-sky-600 flex justify-center flex flex-col gap-y-10 items-center">
-      <div className="text-4xl">
-        {example.word}
-      </div>
-      <div className="text-2xl">
-        {example.example_sentence}
-      </div>
+    <div className="flex flex-col items-center justify-center gap-y-10 rounded-xl p-10 border border-gray-200 shadow-lg bg-white">
+      <div className="text-5xl">{example.word}</div>
+      <div className="text-2xl">{example.example_sentence}</div>
     </div>
-  )
+  );
 }

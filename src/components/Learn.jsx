@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Card from "./Card.jsx";
 import Button from "./Button.jsx";
-import BArrowCounterclockwise from "../icons/BArrowCounterclockwise.jsx";
+import BottomBar from "./BottomBar.jsx";
 import { useKeyboard } from "../hooks/use-keyboard.js";
 import { motion } from "motion/react";
+import { useImmer } from "use-immer";
 
 export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardSequence, setCardSequence] = useState(() =>
+  const [cardSequence, setCardSequence] = useImmer(() =>
     cards.map((card, index) => index)
   );
   const [showAnswer, setShowAnswer] = useState(false);
@@ -24,7 +25,7 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
   let card = cards[cardSequence[currentIndex]];
 
   function handleGoodClick() {
-    onCardDataUpdate(card, "repeated");
+    onCardDataUpdate(card, "reviewed");
     if (currentIndex < cardSequence.length - 1) {
       setCurrentIndex((currentIndex) => currentIndex + 1);
     } else {
@@ -39,7 +40,7 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
   }
 
   function handleAgainClick() {
-    setCardSequence(() => [...cardSequence, cardSequence[currentIndex]]);
+    setCardSequence((draft) => { draft.push(cardSequence[currentIndex]) })
     setCurrentIndex((currentIndex) => currentIndex + 1);
     setShowAnswer(() => false);
   }
@@ -61,18 +62,18 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
   return (
     <>
       <motion.div
-        className="flex h-full flex-col py-10"
+        className="flex h-full flex-col"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
         <Card currentExample={card} showAnswer={showAnswer}></Card>
-        <div className="mt-auto flex">
+        <BottomBar className="p-4">
           <div className="flex-1"></div>
           <div className="flex gap-x-4">
             {!showAnswer && (
               <Button
                 onClick={handleShowAnswerClick}
-                className="bg-green-400 hover:bg-green-300"
+                className="bg-green-300 hover:bg-green-200"
               >
                 Show answer
               </Button>
@@ -80,7 +81,7 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
             {showAnswer && (
               <Button
                 onClick={handleGoodClick}
-                className="bg-green-400 hover:bg-green-300"
+                className="bg-green-300 hover:bg-green-200"
               >
                 Good
               </Button>
@@ -88,16 +89,16 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
             {showAnswer && (
               <Button
                 onClick={handleAgainClick}
-                className="bg-yellow-400 hover:bg-yellow-300"
+                className="bg-yellow-300 hover:bg-yellow-200"
               >
                 Again
               </Button>
             )}
           </div>
           <div className="flex-1 flex justify-end">
-            <Button className="bg-green-400 hover:bg-green-300">More</Button>
+            <Button className="bg-green-300 hover:bg-green-200">More</Button>
           </div>
-        </div>
+        </BottomBar>
       </motion.div>
     </>
   );
