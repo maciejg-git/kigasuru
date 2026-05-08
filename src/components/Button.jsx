@@ -2,9 +2,12 @@ export default function Button({ children, className, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={ 'rounded-xl py-3 px-5 font-semibold flex gap-x-2 items-center justify-center ' + className }
+      className={
+        "flex items-center justify-center gap-x-2 rounded-xl px-5 py-3 font-semibold dark:text-gray-800 " +
+        className
+      }
     >
-      { children }
+      {children}
     </button>
-  )
+  );
 }

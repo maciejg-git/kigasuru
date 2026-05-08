@@ -7,12 +7,9 @@ export default function Home({onClickStart, onClickDeck, data, deckSrsData}) {
     <div className="flex h-full">
       <div className="my-auto mx-auto flex flex-col gap-y-10">
         <div className="flex flex-col items-center">
-          <div className="flex items-center">
-            <span className="text-lg font-semibold">
-              Japanese deck
-            </span>
-            <Button onClick={onClickDeck}>Details</Button>
-          </div>
+          <span className="text-lg font-semibold">
+            Japanese deck
+          </span>
           <table>
             <tbody>
               <tr className="*:px-2">

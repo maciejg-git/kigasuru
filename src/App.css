@@ -3,5 +3,5 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-  @apply bg-violet-100
+  @apply bg-violet-100 dark:bg-neutral-800 dark:text-gray-200
 }

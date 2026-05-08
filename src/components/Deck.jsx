@@ -7,7 +7,7 @@ export default function Deck({deck, deckSrsData}) {
 
   return (
     <>
-      <div className="w-full p-2 rounded-xl border border-gray-200 shadow-lg bg-white">
+      <div className="w-full p-2 rounded-xl border border-gray-200 shadow-lg bg-white dark:bg-gray-700 dark:border-gray-600">
         <table className="text-lg w-full">
           <thead className="font-semibold">
             <tr className="*:p-2 border-b border-gray-300">

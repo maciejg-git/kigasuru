@@ -1,62 +1,72 @@
 [
   {
     "id": 1,
-    "word": "勇気",
-    "translation": "Courage",
-    "example_sentence": "新しいことに挑戦するには勇気が必要です。"
+    "word": "平和",
+    "romaji": "heiwa",
+    "translation": "Peace",
+    "example_sentence": "世界が平和であることを願っています。"
   },
   {
     "id": 2,
-    "word": "訪れる",
-    "translation": "To visit",
-    "example_sentence": "いつか京都を訪れたいと思っています。"
+    "word": "信じる",
+    "romaji": "shinjiru",
+    "translation": "To believe",
+    "example_sentence": "自分自身の力を信じてください。"
   },
   {
     "id": 3,
-    "word": "穏やか",
-    "translation": "Calm / Gentle",
-    "example_sentence": "今日は風がなくて、とても穏やかな海です。"
+    "word": "情熱",
+    "romaji": "jounetsu",
+    "translation": "Passion",
+    "example_sentence": "彼は仕事に対して強い情熱を持っています。"
   },
   {
     "id": 4,
-    "word": "経験",
-    "translation": "Experience",
-    "example_sentence": "海外での生活は良い経験になりました。"
+    "word": "公園",
+    "romaji": "kouen",
+    "translation": "Park",
+    "example_sentence": "天気がいいので公園を散歩しましょう。"
   },
   {
     "id": 5,
-    "word": "守る",
-    "translation": "To protect / To keep (a promise)",
-    "example_sentence": "約束は必ず守らなければなりません。"
+    "word": "忙しい",
+    "romaji": "isogashii",
+    "translation": "Busy",
+    "example_sentence": "今日は仕事がとても忙しいです。"
   },
   {
     "id": 6,
-    "word": "不思議",
-    "translation": "Strange / Wondrous",
-    "example_sentence": "昨晩、とても不思議な夢を見ました。"
+    "word": "伝統",
+    "romaji": "dentou",
+    "translation": "Tradition",
+    "example_sentence": "古い伝統を守ることは大切です。"
   },
   {
     "id": 7,
-    "word": "歴史",
-    "translation": "History",
-    "example_sentence": "このお寺は長い歴史を持っています。"
+    "word": "踊る",
+    "romaji": "odoru",
+    "translation": "To dance",
+    "example_sentence": "彼女はステージで美しく踊りました。"
   },
   {
     "id": 8,
-    "word": "選ぶ",
-    "translation": "To choose",
-    "example_sentence": "好きなデザートを一から選んでください。"
+    "word": "大切",
+    "romaji": "taisetsu",
+    "translation": "Important / Precious",
+    "example_sentence": "これは祖母からもらった大切な指輪です。"
   },
   {
     "id": 9,
-    "word": "新鮮",
-    "translation": "Fresh",
-    "example_sentence": "市場で新鮮な魚を買ってきました。"
+    "word": "窓",
+    "romaji": "mado",
+    "translation": "Window",
+    "example_sentence": "窓から富士山が見えます。"
   },
   {
     "id": 10,
-    "word": "感謝",
-    "translation": "Gratitude / Thanks",
-    "example_sentence": "家族の支えにいつも感謝しています。"
+    "word": "記念日",
+    "romaji": "kinenbi",
+    "translation": "Anniversary",
+    "example_sentence": "今日は私たちの結婚記念日です。"
   }
 ]

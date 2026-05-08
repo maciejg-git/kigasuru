@@ -3,15 +3,15 @@ import Learn from "./components/Learn";
 import Home from "./components/Home";
 import Deck from "./components/Deck";
 import Options from "./components/Options";
+import Navbar from "./components/Navbar";
 import data from "./data/data.json";
 import "./App.css";
 import { calculateLearnCards, getCardDue } from "./srs";
 import { OptionsContext } from "./options-context";
 import { motion } from "motion/react";
-import BGearFill from "./icons/BGearFill";
 
 function App() {
-  const [options, setOptions] = useState({ newCards: 5 });
+  const [options, setOptions] = useState({ newCards: 5, romaji: true });
   const [page, setPage] = useState("home");
   const [learnCards, setLearnCards] = useState([]);
   let currentSrsData = useRef([]);
@@ -71,25 +71,25 @@ function App() {
 
   return (
     <>
-      <div className="fixed left-0 top-0 flex w-full items-center justify-between px-4 py-2">
-        <span className="text-2xl font-semibold">Japan</span>
-        <button
-          onClick={handleClickOptions}
-          className="flex items-center gap-x-1 rounded-lg border border-gray-800 px-2 py-1 font-semibold"
-        >
-          <BGearFill className="opacity-70"></BGearFill>
-          Options
-        </button>
-      </div>
+      <Navbar
+        onClickOptions={handleClickOptions}
+        onClickDeck={handleClickDeck}
+      ></Navbar>
       <div className="mx-auto h-screen max-w-4xl pt-20">
         <OptionsContext value={options}>
           {page === "home" && (
-            <Home
-              onClickStart={handleClickStart}
-              onClickDeck={handleClickDeck}
-              data={data}
-              deckSrsData={deckSrsData}
-            ></Home>
+            <motion.div
+              className="content h-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <Home
+                onClickStart={handleClickStart}
+                onClickDeck={handleClickDeck}
+                data={data}
+                deckSrsData={deckSrsData}
+              ></Home>
+            </motion.div>
           )}
           {page === "learn" && (
             <motion.div
