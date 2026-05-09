@@ -1,13 +1,13 @@
 import Button from "./Button.jsx"
 
-export default function Home({onClickStart, onClickDeck, data, deckSrsData}) {
+export default function Home({onClickStart, data, deckSrsData}) {
   let newCardsCount = Object.keys(deckSrsData.current).length
 
   return (
     <div className="flex h-full">
       <div className="my-auto mx-auto flex flex-col gap-y-10">
         <div className="flex flex-col items-center">
-          <span className="text-lg font-semibold">
+          <span className="text-xl font-semibold mb-4">
             Japanese deck
           </span>
           <table>
@@ -22,7 +22,7 @@ export default function Home({onClickStart, onClickDeck, data, deckSrsData}) {
               </tr>
               <tr className="*:px-2">
                 <td>
-                  New
+                  New cards
                 </td>
                 <td>
                   {data.length - newCardsCount}
@@ -31,7 +31,7 @@ export default function Home({onClickStart, onClickDeck, data, deckSrsData}) {
             </tbody>
           </table>
         </div>
-        <Button className="bg-green-400 hover:bg-green-300" onClick={onClickStart}>
+        <Button className="bg-green-300 hover:bg-green-200" onClick={onClickStart}>
           Start
         </Button>
       </div>

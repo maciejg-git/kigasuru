@@ -1,17 +1,26 @@
+import { useContext } from "react";
+import { OptionsContext } from "../options-context.js";
+
 export default function JapaneseExample({ example }) {
+  const options = useContext(OptionsContext);
+
   return (
-    <div className="flex flex-col items-center justify-center gap-y-10 rounded-xl border border-gray-200 bg-white p-10 shadow-lg dark:bg-gray-700 dark:border-gray-600">
+    <div className="flex flex-col items-center justify-center gap-y-10 rounded-xl border border-gray-200 bg-white p-10 shadow-lg dark:border-gray-600 dark:bg-gray-700">
       <div className="text-5xl">{example.word}</div>
-      <div className="text-2xl text-black/60">{example.romaji}</div>
+      {options.showRomaji && (
+        <div className="text-2xl text-black/60 dark:text-gray-200/80">
+          {example.romaji}
+        </div>
+      )}
       <div className="text-2xl">{example.example_sentence}</div>
-      <div>
+      {options.showJisho && (
         <a
           href={`https://jisho.org/word/${example.word}`}
-          className="text-sky-500 underline"
+          className="text-sky-500 underline dark:text-sky-300"
         >
           Jisho
         </a>
-      </div>
+      )}
     </div>
   );
 }

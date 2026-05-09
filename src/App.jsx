@@ -10,16 +10,33 @@ import { calculateLearnCards, getCardDue } from "./srs";
 import { OptionsContext } from "./options-context";
 import { motion } from "motion/react";
 
+const defaultOptions = {
+  newCards: 5,
+  reviewCards: 100,
+  showRomaji: true,
+  showJisho: true,
+}
+
 function App() {
-  const [options, setOptions] = useState({ newCards: 5, romaji: true });
+  const [options, setOptions] = useState(defaultOptions);
   const [page, setPage] = useState("home");
   const [learnCards, setLearnCards] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
   let currentSrsData = useRef([]);
   let deckSrsData = useRef(
     JSON.parse(localStorage.getItem("deckSrsData")) || {}
   );
   let today = new Date();
   today.setUTCHours(0, 0, 0, 0);
+
+  function handleClickDarkMode() {
+    if (!darkMode) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+    setDarkMode(() => !darkMode)
+  }
 
   function handleClickStart() {
     let cards = calculateLearnCards(
@@ -33,14 +50,6 @@ function App() {
     }
     setLearnCards(cards);
     setPage("learn");
-  }
-
-  function handleClickOptions() {
-    if (page === "home") {
-      setPage("options");
-    } else {
-      setPage("home");
-    }
   }
 
   function handleCardDataUpdate(card, action) {
@@ -72,8 +81,9 @@ function App() {
   return (
     <>
       <Navbar
-        onClickOptions={handleClickOptions}
-        onClickDeck={handleClickDeck}
+        onClickDarkMode={handleClickDarkMode}
+        setPage={setPage}
+        darkMode={darkMode}
       ></Navbar>
       <div className="mx-auto h-screen max-w-4xl pt-20">
         <OptionsContext value={options}>

@@ -10,7 +10,7 @@ export default function Deck({deck, deckSrsData}) {
       <div className="w-full p-2 rounded-xl border border-gray-200 shadow-lg bg-white dark:bg-gray-700 dark:border-gray-600">
         <table className="text-lg w-full">
           <thead className="font-semibold">
-            <tr className="*:p-2 border-b border-gray-300">
+            <tr className="*:p-2 border-b border-gray-300 dark:border-gray-500">
               <td>Word</td>
               <td>Sentence</td>
               <td>Translation</td>
@@ -19,7 +19,7 @@ export default function Deck({deck, deckSrsData}) {
           <tbody>
             {deck.map((card) => {
               return (
-                <tr key={card.id} className="*:p-2 border-t border-gray-300">
+                <tr key={card.id} className="*:p-2 border-t border-gray-300 dark:border-gray-500">
                   <td>
                     {card.word}
                   </td>
