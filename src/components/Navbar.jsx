@@ -1,11 +1,9 @@
 import BGearFill from "../icons/BGearFill";
 import ButtonOutline from "./ButtonOutline";
-import BMoon from "../icons/BMoon";
-import BSun from "../icons/BSun";
 import BStack from "../icons/BStack";
 import FaArrowLeftLongSolid from "../icons/FaArrowLeftLongSolid";
 import BBarChart from "../icons/BBarChart";
-import { motion } from "motion/react";
+import DarkModeButton from "./DarkModeButton";
 
 export default function Navbar({ setPage, onClickDarkMode, darkMode }) {
   return (
@@ -28,13 +26,10 @@ export default function Navbar({ setPage, onClickDarkMode, darkMode }) {
           <BGearFill className="opacity-70"></BGearFill>
           Options
         </ButtonOutline>
-        <button onClick={onClickDarkMode} className="ml-4">
-          {!darkMode ? (
-            <BSun className="h-5 w-5"></BSun>
-          ) : (
-            <BMoon className="h-5 w-5"></BMoon>
-          )}
-        </button>
+        <DarkModeButton
+          darkMode={darkMode}
+          onClickDarkMode={onClickDarkMode}
+        ></DarkModeButton>
       </div>
     </div>
   );

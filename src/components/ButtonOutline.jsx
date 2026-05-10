@@ -3,7 +3,7 @@ export default function ButtonOutline({ children, className, onClick }) {
     <button
       onClick={onClick}
       className={
-        "flex items-center gap-x-1 rounded-lg border border-gray-800 px-2 py-1 font-semibold dark:border-gray-400 dark:text-gray-300 " +
+        "flex items-center gap-x-1 rounded-lg px-2 py-1 font-semibold dark:border-gray-400 dark:text-gray-300 " +
         className
       }
     >

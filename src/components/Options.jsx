@@ -1,16 +1,17 @@
-import { useId } from "react"
+import { useId } from "react";
 import Input from "./Input";
 import Switch from "./Switch";
+import Separator from "./Separator";
 
 export default function Options({ options, setOptions }) {
-  let newCardsId = useId()
-  let reviewCardsId = useId()
-  let showRomaji = useId()
-  let showJisho = useId()
+  let newCardsId = useId();
+  let reviewCardsId = useId();
+  let showRomaji = useId();
+  let showJisho = useId();
 
   return (
     <div className="flex w-full flex-col gap-y-6 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-700">
-      <div className="text-lg font-semibold">Daily limits</div>
+      <OptionHeader>Daily limits</OptionHeader>
       <div className="flex flex-col gap-y-4">
         <div className="flex items-center">
           <label htmlFor={newCardsId}>New cards/day</label>
@@ -38,9 +39,9 @@ export default function Options({ options, setOptions }) {
         </div>
       </div>
 
-      <div className="border-b border-gray-200"></div>
+      <Separator />
 
-      <div className="text-lg font-semibold">Cards</div>
+      <OptionHeader>Cards</OptionHeader>
       <div className="flex flex-col gap-y-4">
         <div className="flex items-center">
           <label htmlFor={showRomaji}>Show romaji</label>
@@ -53,7 +54,9 @@ export default function Options({ options, setOptions }) {
             id={showRomaji}
           ></Switch>
         </div>
-        <p className="text-sm text-black/60 dark:text-gray-200/60 ml-2">Romaji is the use of Latin script to write the Japanese language</p>
+        <OptionDescription>
+          Romaji is the use of Latin script to write the Japanese language
+        </OptionDescription>
         <div className="flex items-center">
           <label htmlFor={showJisho}>Show Jisho link</label>
           <Switch
@@ -65,7 +68,24 @@ export default function Options({ options, setOptions }) {
             id={showJisho}
           ></Switch>
         </div>
+        <OptionDescription>
+          Jisho is a powerful Japanese-English dictionary. It lets you find words, kanji, example sentences and more quickly and easily. When enabled, a dictionary link for the word is displayed on every card.
+        </OptionDescription>
       </div>
     </div>
   );
+}
+
+function OptionDescription({children}) {
+  return (
+    <p className="ml-2 text-sm text-black/60 dark:text-gray-200/60">
+      {children}
+    </p>
+  )
+}
+
+function OptionHeader({children}) {
+  return (
+    <div className="text-lg font-semibold">{children}</div>
+  )
 }

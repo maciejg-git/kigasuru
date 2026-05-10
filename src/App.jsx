@@ -53,6 +53,7 @@ function App() {
   }
 
   function handleCardDataUpdate(card, action) {
+    let cardData = deckSrsData.current[card.id]
     if (!deckSrsData.current[card.id]) {
       currentSrsData.current[card.id] = { ...card, reviewed: 0, due: null };
     } else {
@@ -85,6 +86,7 @@ function App() {
         setPage={setPage}
         darkMode={darkMode}
       ></Navbar>
+
       <div className="mx-auto h-screen max-w-4xl pt-20">
         <OptionsContext value={options}>
           {page === "home" && (
@@ -120,7 +122,7 @@ function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <Deck deck={data}></Deck>
+              <Deck deck={data} deckSrsData={deckSrsData}></Deck>
             </motion.div>
           )}
           {page === "options" && (
