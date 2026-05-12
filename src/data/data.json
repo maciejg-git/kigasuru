@@ -1,72 +1,75 @@
-[
-  {
-    "id": 1,
-    "word": "平和",
-    "romaji": "heiwa",
-    "translation": "Peace",
-    "example_sentence": "世界が平和であることを願っています。"
-  },
-  {
-    "id": 2,
-    "word": "信じる",
-    "romaji": "shinjiru",
-    "translation": "To believe",
-    "example_sentence": "自分自身の力を信じてください。"
-  },
-  {
-    "id": 3,
-    "word": "情熱",
-    "romaji": "jounetsu",
-    "translation": "Passion",
-    "example_sentence": "彼は仕事に対して強い情熱を持っています。"
-  },
-  {
-    "id": 4,
-    "word": "公園",
-    "romaji": "kouen",
-    "translation": "Park",
-    "example_sentence": "天気がいいので公園を散歩しましょう。"
-  },
-  {
-    "id": 5,
-    "word": "忙しい",
-    "romaji": "isogashii",
-    "translation": "Busy",
-    "example_sentence": "今日は仕事がとても忙しいです。"
-  },
-  {
-    "id": 6,
-    "word": "伝統",
-    "romaji": "dentou",
-    "translation": "Tradition",
-    "example_sentence": "古い伝統を守ることは大切です。"
-  },
-  {
-    "id": 7,
-    "word": "踊る",
-    "romaji": "odoru",
-    "translation": "To dance",
-    "example_sentence": "彼女はステージで美しく踊りました。"
-  },
-  {
-    "id": 8,
-    "word": "大切",
-    "romaji": "taisetsu",
-    "translation": "Important / Precious",
-    "example_sentence": "これは祖母からもらった大切な指輪です。"
-  },
-  {
-    "id": 9,
-    "word": "窓",
-    "romaji": "mado",
-    "translation": "Window",
-    "example_sentence": "窓から富士山が見えます。"
-  },
-  {
-    "id": 10,
-    "word": "記念日",
-    "romaji": "kinenbi",
-    "translation": "Anniversary",
-    "example_sentence": "今日は私たちの結婚記念日です。"
-  }
-]
+{
+  "name": "Japanese deck",
+  "cards": [
+    {
+      "id": 1,
+      "word": "平和",
+      "romaji": "heiwa",
+      "translation": "Peace",
+      "example_sentence": "世界が平和であることを願っています。"
+    },
+    {
+      "id": 2,
+      "word": "信じる",
+      "romaji": "shinjiru",
+      "translation": "To believe",
+      "example_sentence": "自分自身の力を信じてください。"
+    },
+    {
+      "id": 3,
+      "word": "情熱",
+      "romaji": "jounetsu",
+      "translation": "Passion",
+      "example_sentence": "彼は仕事に対して強い情熱を持っています。"
+    },
+    {
+      "id": 4,
+      "word": "公園",
+      "romaji": "kouen",
+      "translation": "Park",
+      "example_sentence": "天気がいいので公園を散歩しましょう。"
+    },
+    {
+      "id": 5,
+      "word": "忙しい",
+      "romaji": "isogashii",
+      "translation": "Busy",
+      "example_sentence": "今日は仕事がとても忙しいです。"
+    },
+    {
+      "id": 6,
+      "word": "伝統",
+      "romaji": "dentou",
+      "translation": "Tradition",
+      "example_sentence": "古い伝統を守ることは大切です。"
+    },
+    {
+      "id": 7,
+      "word": "踊る",
+      "romaji": "odoru",
+      "translation": "To dance",
+      "example_sentence": "彼女はステージで美しく踊りました。"
+    },
+    {
+      "id": 8,
+      "word": "大切",
+      "romaji": "taisetsu",
+      "translation": "Important / Precious",
+      "example_sentence": "これは祖母からもらった大切な指輪です。"
+    },
+    {
+      "id": 9,
+      "word": "窓",
+      "romaji": "mado",
+      "translation": "Window",
+      "example_sentence": "窓から富士山が見えます。"
+    },
+    {
+      "id": 10,
+      "word": "記念日",
+      "romaji": "kinenbi",
+      "translation": "Anniversary",
+      "example_sentence": "今日は私たちの結婚記念日です。"
+    }
+  ]
+}

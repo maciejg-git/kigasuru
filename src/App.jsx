@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import Deck from "./components/Deck";
 import Options from "./components/Options";
 import Navbar from "./components/Navbar";
-import data from "./data/data.json";
 import "./App.css";
 import { calculateLearnCards, getCardDue } from "./srs";
 import { OptionsContext } from "./options-context";
@@ -15,6 +14,17 @@ const defaultOptions = {
   reviewCards: 100,
   showRomaji: true,
   showJisho: true,
+};
+
+const defaultDeck = {
+  name: "Default deck",
+  cards: [],
+};
+
+const defaultCardData = {
+  reviewed: 0,
+  due: null,
+  suspended: false,
 }
 
 function App() {
@@ -22,6 +32,9 @@ function App() {
   const [page, setPage] = useState("home");
   const [learnCards, setLearnCards] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
+  const [deck, setDeck] = useState(() => {
+    return JSON.parse(localStorage.getItem("deck")) || defaultDeck;
+  });
   let currentSrsData = useRef([]);
   let deckSrsData = useRef(
     JSON.parse(localStorage.getItem("deckSrsData")) || {}
@@ -29,18 +42,22 @@ function App() {
   let today = new Date();
   today.setUTCHours(0, 0, 0, 0);
 
+  useEffect(() => {
+    localStorage.setItem("deck", JSON.stringify(deck));
+  }, [deck]);
+
   function handleClickDarkMode() {
     if (!darkMode) {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-    setDarkMode(() => !darkMode)
+    setDarkMode(() => !darkMode);
   }
 
   function handleClickStart() {
     let cards = calculateLearnCards(
-      data,
+      deck.cards,
       deckSrsData.current,
       today,
       options.newCards
@@ -53,20 +70,17 @@ function App() {
   }
 
   function handleCardDataUpdate(card, action) {
-    let cardData = deckSrsData.current[card.id]
-    if (!deckSrsData.current[card.id]) {
-      currentSrsData.current[card.id] = { ...card, reviewed: 0, due: null };
-    } else {
-      currentSrsData.current[card.id] = { ...deckSrsData.current[card.id] };
-    }
+    let cardData = deckSrsData.current[card.id] || {
+      ...card,
+      ...defaultCardData,
+    };
 
     if (action === "reviewed") {
-      currentSrsData.current[card.id].reviewed++;
-      currentSrsData.current[card.id].due = getCardDue(
-        currentSrsData.current[card.id],
-        today
-      ).getTime();
+      cardData.reviewed++;
+      cardData.due = getCardDue(cardData, today).getTime();
     }
+
+    currentSrsData.current[card.id] = cardData;
   }
 
   function handleLearnFinished() {
@@ -87,7 +101,7 @@ function App() {
         darkMode={darkMode}
       ></Navbar>
 
-      <div className="mx-auto h-screen max-w-4xl pt-20">
+      <div className="mx-auto h-screen max-w-5xl pt-20">
         <OptionsContext value={options}>
           {page === "home" && (
             <motion.div
@@ -98,7 +112,7 @@ function App() {
               <Home
                 onClickStart={handleClickStart}
                 onClickDeck={handleClickDeck}
-                data={data}
+                data={deck}
                 deckSrsData={deckSrsData}
               ></Home>
             </motion.div>
@@ -122,7 +136,7 @@ function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <Deck deck={data} deckSrsData={deckSrsData}></Deck>
+              <Deck deck={deck} deckSrsData={deckSrsData}></Deck>
             </motion.div>
           )}
           {page === "options" && (

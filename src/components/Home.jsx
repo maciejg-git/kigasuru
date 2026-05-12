@@ -8,7 +8,7 @@ export default function Home({onClickStart, data, deckSrsData}) {
       <div className="my-auto mx-auto flex flex-col gap-y-10">
         <div className="flex flex-col items-center">
           <span className="text-xl font-semibold mb-4">
-            Japanese deck
+            {data.name}
           </span>
           <table>
             <tbody>
@@ -17,7 +17,7 @@ export default function Home({onClickStart, data, deckSrsData}) {
                   Cards
                 </td>
                 <td>
-                  {data.length}
+                  {data.cards.length}
                 </td>
               </tr>
               <tr className="*:px-2">
@@ -25,7 +25,7 @@ export default function Home({onClickStart, data, deckSrsData}) {
                   New cards
                 </td>
                 <td>
-                  {data.length - newCardsCount}
+                  {data.cards.length - newCardsCount}
                 </td>
               </tr>
             </tbody>
