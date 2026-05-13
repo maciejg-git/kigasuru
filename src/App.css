@@ -3,5 +3,28 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-  @apply bg-violet-100 dark:bg-neutral-800 dark:text-gray-200
+  @apply bg-violet-100 dark:bg-gray-900 dark:text-gray-300
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  @keyframes overlayShow {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes contentShow {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  --animate-overlay-show: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-content-show: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }

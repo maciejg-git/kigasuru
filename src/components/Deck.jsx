@@ -4,7 +4,12 @@ import Button from "./Button.jsx";
 import { OptionsContext } from "../options-context.js";
 import clsx from "clsx";
 
-export default function Deck({ deck, deckSrsData }) {
+export default function Deck({
+  deck,
+  deckSrsData,
+  setModalOpen,
+  setModalData,
+}) {
   const options = useContext(OptionsContext);
 
   const [selectedItems, setSelectedItems] = useState(new Set());
@@ -29,10 +34,30 @@ export default function Deck({ deck, deckSrsData }) {
     });
   }
 
+  function handleSuspendClick() {
+    setModalData({
+      title: "Suspend cards",
+      message: `Suspend ${selectedItems.size} cards`,
+      labelAccept: "OK",
+      labelCancel: "Cancel",
+    });
+    setModalOpen(true);
+  }
+
+  function handleResetClick() {
+    setModalData({
+      title: "Reset cards",
+      message: `Reset ${selectedItems.size} cards`,
+      labelAccept: "OK",
+      labelCancel: "Cancel",
+    });
+    setModalOpen(true);
+  }
+
   return (
     <>
-      <div className="text-xl font-semibold mb-4">{deck.name}</div>
-      <div className="w-full rounded-xl border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-600 dark:bg-gray-700">
+      <div className="mb-4 text-xl font-semibold">{deck.name}</div>
+      <div className="w-full rounded-xl border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-600 dark:bg-gray-800">
         <table className="w-full text-lg">
           <thead className="font-semibold">
             <tr className="*:p-2 border-b border-gray-300 dark:border-gray-500">
@@ -49,14 +74,22 @@ export default function Deck({ deck, deckSrsData }) {
                   key={card.id}
                   onClick={() => handleItemClick(card.id)}
                   className={clsx(
-                    "*:p-2 border-t border-gray-300 dark:border-gray-500",
-                    { "bg-neutral-100 dark:bg-gray-600": selectedItems.has(card.id) }
+                    "*:p-2 border-t border-gray-300 dark:border-gray-600",
+                    {
+                      "bg-neutral-100 dark:bg-gray-700": selectedItems.has(
+                        card.id
+                      ),
+                    }
                   )}
                 >
                   <td>{card.word}</td>
-                  <td>{card.example_sentence}</td>
+                  <td className="text-sm">{card.example_sentence}</td>
                   <td>{card.translation}</td>
-                  <td>{getCardDue(card.id) || <Badge variant="success">New</Badge>}</td>
+                  <td>
+                    {getCardDue(card.id) || (
+                      <Badge variant="success">New</Badge>
+                    )}
+                  </td>
                 </tr>
               );
             })}
@@ -68,15 +101,25 @@ export default function Deck({ deck, deckSrsData }) {
           <Button className="bg-green-300 hover:bg-green-200">Add card</Button>
         </div>
         <div className="flex gap-x-4">
-        {!!selectedItems.size && 
-          <>
-            <Button className="bg-yellow-300 hover:bg-yellow-200">Suspend</Button>
-            <Button className="bg-yellow-300 hover:bg-yellow-200">Reset</Button>
-            <Button className="bg-red-300 hover:bg-red-200">Delete</Button>
-          </>
-        }
+          {!!selectedItems.size && (
+            <>
+              <Button
+                className="bg-yellow-300 hover:bg-yellow-200"
+                onClick={handleSuspendClick}
+              >
+                Suspend
+              </Button>
+              <Button
+                className="bg-yellow-300 hover:bg-yellow-200"
+                onClick={handleResetClick}
+              >
+                Reset
+              </Button>
+              <Button className="bg-red-300 hover:bg-red-200">Delete</Button>
+            </>
+          )}
         </div>
-        <div className="flex flex-1 gap-x-4 justify-end">
+        <div className="flex flex-1 justify-end gap-x-4">
           <Button className="bg-green-300 hover:bg-green-200">More</Button>
         </div>
       </BottomBar>

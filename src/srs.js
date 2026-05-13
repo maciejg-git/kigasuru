@@ -10,7 +10,7 @@ function calculateLearnCards(data, cardsData, today, newCardsLimit) {
   return [...newCards, ...dueCards];
 }
 
-function getCardDue(cardData, today) {
+function getCardDue(cardData, today, rating) {
   let due = new Date(today);
   due.setUTCDate(today.getUTCDate() + (cardData.reviewed * 2));
   due.setUTCHours(0, 0, 0, 0)

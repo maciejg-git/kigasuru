@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Deck from "./components/Deck";
 import Options from "./components/Options";
 import Navbar from "./components/Navbar";
+import Modal from "./components/Modal";
 import "./App.css";
 import { calculateLearnCards, getCardDue } from "./srs";
 import { OptionsContext } from "./options-context";
@@ -25,7 +26,7 @@ const defaultCardData = {
   reviewed: 0,
   due: null,
   suspended: false,
-}
+};
 
 function App() {
   const [options, setOptions] = useState(defaultOptions);
@@ -39,6 +40,8 @@ function App() {
   let deckSrsData = useRef(
     JSON.parse(localStorage.getItem("deckSrsData")) || {}
   );
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalData, setModalData] = useState({});
   let today = new Date();
   today.setUTCHours(0, 0, 0, 0);
 
@@ -69,7 +72,7 @@ function App() {
     setPage("learn");
   }
 
-  function handleCardDataUpdate(card, action) {
+  function handleCardDataUpdate(card, action, details) {
     let cardData = deckSrsData.current[card.id] || {
       ...card,
       ...defaultCardData,
@@ -77,7 +80,7 @@ function App() {
 
     if (action === "reviewed") {
       cardData.reviewed++;
-      cardData.due = getCardDue(cardData, today).getTime();
+      cardData.due = getCardDue(cardData, today, details).getTime();
     }
 
     currentSrsData.current[card.id] = cardData;
@@ -136,7 +139,13 @@ function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <Deck deck={deck} deckSrsData={deckSrsData}></Deck>
+              <Deck
+                deck={deck}
+                deckSrsData={deckSrsData}
+                onCardDataUpdate={handleCardDataUpdate}
+                setModalOpen={setModalOpen}
+                setModalData={setModalData}
+              ></Deck>
             </motion.div>
           )}
           {page === "options" && (
@@ -149,6 +158,7 @@ function App() {
             </motion.div>
           )}
         </OptionsContext>
+        <Modal open={modalOpen} setOpen={setModalOpen} {...modalData}></Modal>
       </div>
     </>
   );

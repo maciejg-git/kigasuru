@@ -5,10 +5,10 @@ export default function JapaneseExample({ example }) {
   const options = useContext(OptionsContext);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-10 rounded-xl border border-gray-200 bg-white p-10 shadow-lg dark:border-gray-600 dark:bg-gray-700">
+    <div className="flex flex-col items-center justify-center gap-y-10 rounded-xl border border-gray-200 bg-white p-10 shadow-lg dark:border-gray-700 dark:bg-gray-800">
       <div className="text-5xl">{example.word}</div>
       {options.showRomaji && (
-        <div className="text-2xl text-black/60 dark:text-gray-200/80">
+        <div className="text-2xl text-black/50 dark:text-gray-200/70">
           {example.romaji}
         </div>
       )}

@@ -31,7 +31,7 @@ export default function Home({onClickStart, data, deckSrsData}) {
             </tbody>
           </table>
         </div>
-        <Button className="bg-green-300 hover:bg-green-200" onClick={onClickStart}>
+        <Button className="bg-lime-300 hover:bg-lime-200" onClick={onClickStart}>
           Start
         </Button>
       </div>

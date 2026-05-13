@@ -20,11 +20,15 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
     key: "a",
     onKeyPressed: () => handleKeyboard("a"),
   });
+  useKeyboard({
+    key: "1",
+    onKeyPressed: () => handleKeyboard("1"),
+  });
 
   let card = cards[cardSequence[currentIndex]];
 
-  function handleGoodClick() {
-    onCardDataUpdate(card, "reviewed");
+  function handleReviewedClick(rating) {
+    onCardDataUpdate(card, "reviewed", rating);
     if (currentIndex < cardSequence.length - 1) {
       setCurrentIndex((currentIndex) => currentIndex + 1);
     } else {
@@ -49,7 +53,7 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
   function handleKeyboard(key) {
     if (key === "space") {
       if (showAnswer) {
-        handleGoodClick();
+        handleReviewedClick("good");
         return;
       }
       handleShowAnswerClick();
@@ -57,6 +61,13 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
     }
     if (key === "a") {
       handleAgainClick();
+      return
+    }
+    if (key === "1") {
+      if (showAnswer) {
+        handleReviewedClick("easy");
+        return;
+      }
     }
   }
 
@@ -69,18 +80,32 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
           {!showAnswer && (
             <Button
               onClick={handleShowAnswerClick}
-              className="bg-green-300 hover:bg-green-200"
+              className="bg-lime-300 hover:bg-lime-200"
             >
               Show answer
             </Button>
           )}
           {showAnswer && (
-            <Button
-              onClick={handleGoodClick}
-              className="bg-green-300 hover:bg-green-200"
-            >
-              Good
-            </Button>
+            <>
+              <Button
+                onClick={() => handleReviewedClick("easy")}
+                className="bg-lime-300 hover:bg-lime-200"
+              >
+                Easy
+              </Button>
+              <Button
+                onClick={() => handleReviewedClick("good")}
+                className="bg-lime-300 hover:bg-lime-200"
+              >
+                Good
+              </Button>
+              <Button
+                onClick={() => handleReviewedClick("hard")}
+                className="bg-lime-300 hover:bg-lime-200"
+              >
+                Hard
+              </Button>
+            </>
           )}
           {showAnswer && (
             <Button
@@ -92,7 +117,7 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
           )}
         </div>
         <div className="flex flex-1 justify-end">
-          <Button className="bg-green-300 hover:bg-green-200">More</Button>
+          <Button className="bg-lime-300 hover:bg-lime-200">More</Button>
         </div>
       </BottomBar>
     </>

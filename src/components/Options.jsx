@@ -10,7 +10,7 @@ export default function Options({ options, setOptions }) {
   let showJisho = useId();
 
   return (
-    <div className="flex w-full flex-col gap-y-6 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-700">
+    <div className="flex w-full flex-col gap-y-6 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-800">
       <OptionHeader>Daily limits</OptionHeader>
       <div className="flex flex-col gap-y-4">
         <div className="flex items-center">
@@ -71,6 +71,22 @@ export default function Options({ options, setOptions }) {
         <OptionDescription>
           Jisho is a powerful Japanese-English dictionary. It lets you find words, kanji, example sentences and more quickly and easily. When enabled, a dictionary link for the word is displayed on every card.
         </OptionDescription>
+      </div>
+
+      <Separator />
+
+      <OptionHeader>Order</OptionHeader>
+      <div className="flex flex-col gap-y-4">
+        <div className="flex items-center">
+          <label htmlFor={showRomaji}>Card order</label>
+          <div className="ml-auto">
+            <select className="outline-hidden focus-within:ring-3 focus:outline-hidden flex items-center rounded-sm border border-gray-300 bg-white px-3 py-2 transition-shadow duration-200 focus-within:border-gray-400 focus-within:ring-violet-200 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:focus-within:ring-violet-300">
+              <option value="">New first</option>
+              <option value="">Review first</option>
+              <option value="">Mixed</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   );
