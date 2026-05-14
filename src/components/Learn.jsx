@@ -28,7 +28,7 @@ export default function Learn({ cards, onCardDataUpdate, onLearnFinish }) {
   let card = cards[cardSequence[currentIndex]];
 
   function handleReviewedClick(rating) {
-    onCardDataUpdate(card, "reviewed", rating);
+    onCardDataUpdate(card.id, "reviewed", rating);
     if (currentIndex < cardSequence.length - 1) {
       setCurrentIndex((currentIndex) => currentIndex + 1);
     } else {

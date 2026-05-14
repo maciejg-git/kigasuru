@@ -72,9 +72,8 @@ function App() {
     setPage("learn");
   }
 
-  function handleCardDataUpdate(card, action, details) {
-    let cardData = deckSrsData.current[card.id] || {
-      ...card,
+  function handleCardDataUpdate(cardId, action, details) {
+    let cardData = deckSrsData.current[cardId] || {
       ...defaultCardData,
     };
 
@@ -83,7 +82,7 @@ function App() {
       cardData.due = getCardDue(cardData, today, details).getTime();
     }
 
-    currentSrsData.current[card.id] = cardData;
+    currentSrsData.current[cardId] = cardData;
   }
 
   function handleLearnFinished() {
