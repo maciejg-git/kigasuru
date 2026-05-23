@@ -8,7 +8,7 @@ import DarkModeButton from "./DarkModeButton";
 export default function Navbar({ setPage, onClickDarkMode, darkMode }) {
   return (
     <div className="fixed left-0 top-0 flex w-full items-center justify-between px-4 py-2">
-      <span className="text-2xl font-semibold">Japan</span>
+      <span className="text-2xl font-semibold">Kigasuru</span>
       <div className="flex gap-x-2">
         <ButtonOutline onClick={() => setPage("home")}>
           <FaArrowLeftLongSolid className="h-5 w-5 opacity-70"></FaArrowLeftLongSolid>
