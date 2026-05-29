@@ -1,3 +1,5 @@
+import { State } from 'ts-fsrs'
+
 function calculateLearnCards(data, cardsData, today, newCardsLimit) {
   let newCards = data
     .filter((card) => {
@@ -7,28 +9,20 @@ function calculateLearnCards(data, cardsData, today, newCardsLimit) {
 
   let dueCards = getDueCards(data, cardsData, today)
 
-  return [...newCards, ...dueCards];
-}
-
-function getCardDue(cardData, today, rating) {
-  let due = new Date(today);
-  due.setUTCDate(today.getUTCDate() + (cardData.reviewed * 2));
-  due.setUTCHours(0, 0, 0, 0)
-  return due
+  return [newCards, dueCards];
 }
 
 function getDueCards(data, cardsData, today) {
   return data.filter((card) => {
-    if (cardsData[card.id]) {
-      if (cardsData[card.id].due) {
-        let due = new Date(cardsData[card.id].due)
-        return due <= today
-      }
+    let cardData = cardsData[card.id]
+    if (cardData) {
+      let due = new Date(cardData.fsrs.due)
+      let review = cardData.fsrs.state === State.Review
+      return due <= today && review
     }
   })
 }
 
 export {
   calculateLearnCards,
-  getCardDue,
 }

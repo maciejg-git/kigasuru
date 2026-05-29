@@ -1,18 +1,22 @@
 import Button from "./Button.jsx"
+import { State } from "ts-fsrs"
 
 export default function Home({onClickStart, data, deckSrsData}) {
   let newCardsCount = Object.keys(deckSrsData.current).length
+  let reviewCardsCount = Object.values(deckSrsData.current).filter((card) => {
+    return card.fsrs.state === State.Review
+  })
 
   return (
     <div className="flex h-full">
-      <div className="my-auto mx-auto flex flex-col gap-y-10">
+      <div className="my-auto mx-auto flex flex-col gap-y-16">
         <div className="flex flex-col items-center">
           <span className="text-xl font-semibold mb-4">
             {data.name}
           </span>
           <table>
             <tbody>
-              <tr className="*:px-2">
+              <tr className="*:px-4 *:py-1">
                 <td>
                   Cards
                 </td>
@@ -20,12 +24,20 @@ export default function Home({onClickStart, data, deckSrsData}) {
                   {data.cards.length}
                 </td>
               </tr>
-              <tr className="*:px-2">
+              <tr className="*:px-4 *:py-1">
                 <td>
                   New cards
                 </td>
                 <td>
                   {data.cards.length - newCardsCount}
+                </td>
+              </tr>
+              <tr className="*:px-4 *:py-1">
+                <td>
+                  Reviews
+                </td>
+                <td>
+                  {reviewCardsCount.length}
                 </td>
               </tr>
             </tbody>

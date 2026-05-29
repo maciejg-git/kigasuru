@@ -9,4 +9,5 @@ Made with:
 - Motion for React
 - Radix
 - Immer
+- ts-fsrs
 - clsx

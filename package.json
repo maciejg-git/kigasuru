@@ -19,6 +19,7 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "tailwindcss": "^4.2.4",
+    "ts-fsrs": "^5.4.1",
     "use-immer": "^0.11.0"
   },
   "devDependencies": {

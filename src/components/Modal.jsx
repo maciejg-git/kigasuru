@@ -1,6 +1,6 @@
 import { Dialog } from "radix-ui";
 
-const Modal = ({ open, setOpen, title, message, labelAccept, labelCancel }) => (
+const Modal = ({ open, setOpen, title, message, labelAccept, labelCancel, onAccept }) => (
   <Dialog.Root open={open} onOpenChange={setOpen}>
     <Dialog.Portal>
       <Dialog.Overlay className="data-[state=open]:animate-overlay-show fixed inset-0 bg-black/50" />
@@ -16,7 +16,7 @@ const Modal = ({ open, setOpen, title, message, labelAccept, labelCancel }) => (
 
         <div className="mt-6 flex justify-end gap-x-2">
           <Dialog.Close asChild>
-            <button className="inline-flex h-9 items-center justify-center rounded-md bg-lime-300 px-4 font-medium leading-none text-black transition-colors hover:bg-lime-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus-visible:ring-offset-2">
+            <button className="inline-flex h-9 items-center justify-center rounded-md bg-lime-300 px-4 font-medium leading-none text-black transition-colors hover:bg-lime-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 focus-visible:ring-offset-2" onClick={onAccept}>
               {labelAccept}
             </button>
           </Dialog.Close>

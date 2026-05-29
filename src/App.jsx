@@ -5,10 +5,12 @@ import Deck from "./components/Deck";
 import Options from "./components/Options";
 import Navbar from "./components/Navbar";
 import Modal from "./components/Modal";
+import CardEdit from "./components/CardEdit.jsx"
 import "./App.css";
-import { calculateLearnCards, getCardDue } from "./srs";
+import { calculateLearnCards } from "./srs";
 import { OptionsContext } from "./options-context";
 import { motion } from "motion/react";
+import { createEmptyCard, fsrs, Rating } from "ts-fsrs";
 
 const defaultOptions = {
   newCards: 5,
@@ -97,12 +99,17 @@ const defaultCardData = {
   reviewed: 0,
   due: null,
   suspended: false,
+  fsrs: createEmptyCard(),
 };
+
+let today = ""
+let debug = false;
 
 function App() {
   const [options, setOptions] = useState(defaultOptions);
   const [page, setPage] = useState("home");
-  const [learnCards, setLearnCards] = useState([]);
+  const [newCards, setNewCards] = useState([]);
+  const [reviewCards, setReviewCards] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
   const [deck, setDeck] = useState(() => {
     return JSON.parse(localStorage.getItem("deck")) || defaultDeck;
@@ -111,8 +118,7 @@ function App() {
   let deckSrsData = useRef(JSON.parse(localStorage.getItem("deckSrsData")) || {});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
-  let today = new Date();
-  today.setUTCHours(0, 0, 0, 0);
+  const scheduler = useRef(fsrs());
 
   useEffect(() => {
     localStorage.setItem("deck", JSON.stringify(deck));
@@ -127,36 +133,76 @@ function App() {
     setDarkMode(() => !darkMode);
   }
 
+  function getCardData(cardId) {
+    let cardData = currentSrsData.current[cardId] ||
+      deckSrsData.current[cardId]
+    if (!cardData) {
+      cardData = {...defaultCardData}
+      deckSrsData.current[cardId] = cardData
+    }
+    return cardData
+  }
+
   function handleClickStart() {
-    let cards = calculateLearnCards(deck.cards, deckSrsData.current, today, options.newCards);
-    if (!cards.length) {
+    let [newCards, reviewCards] = calculateLearnCards(
+      deck.cards,
+      deckSrsData.current,
+      new Date(today ? today : Date.now()),
+      options.newCards,
+    );
+    if (!newCards.length && !reviewCards.length) {
       return;
     }
-    setLearnCards(cards);
+    setNewCards(newCards);
+    setReviewCards(reviewCards);
     setPage("learn");
   }
 
   function handleCardDataUpdate(cardId, action, details) {
-    let cardData = deckSrsData.current[cardId] || {
-      ...defaultCardData,
-    };
+    let cardData = getCardData(cardId)
 
-    if (action === "reviewed") {
-      cardData.reviewed++;
-      cardData.due = getCardDue(cardData, today, details).getTime();
-    }
+    const { card, log } = scheduler.current.next(
+      cardData.fsrs,
+      new Date(today ? today : Date.now()),
+      Rating[details],
+      ({ card, log }) => ({
+        card: {
+          ...card,
+          due: card.due.getTime(),
+          last_review: card.last_review?.getTime() ?? null,
+        },
+        log: {
+          ...log,
+          due: log.due.getTime(),
+          review: log.review.getTime(),
+        },
+      }),
+    );
+    cardData.fsrs = { ...card };
 
     currentSrsData.current[cardId] = cardData;
+
+    return card;
   }
 
   function handleLearnFinished() {
     deckSrsData.current = { ...deckSrsData.current, ...currentSrsData.current };
+    currentSrsData.current = [];
     setPage("home");
     localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
   }
 
   function handleClickDeck() {
     setPage("deck");
+  }
+
+  function handleSuspendCards(cardsId) {
+    let ids = [...cardsId]
+    ids.forEach((id) => {
+      let cardData = getCardData(id)
+      cardData.suspended = true
+    })
+    localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
   }
 
   return (
@@ -182,7 +228,8 @@ function App() {
           {page === "learn" && (
             <motion.div className="content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <Learn
-                cards={learnCards}
+                newCardsProp={newCards}
+                reviewCardsProp={reviewCards}
                 onCardDataUpdate={handleCardDataUpdate}
                 onLearnFinish={handleLearnFinished}
               ></Learn>
@@ -196,8 +243,12 @@ function App() {
                 onCardDataUpdate={handleCardDataUpdate}
                 setModalOpen={setModalOpen}
                 setModalData={setModalData}
+                onSuspend={handleSuspendCards}
               ></Deck>
             </motion.div>
+          )}
+          {page === "edit" && (
+            <CardEdit></CardEdit>
           )}
           {page === "options" && (
             <motion.div className="content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -206,6 +257,13 @@ function App() {
           )}
         </OptionsContext>
         <Modal open={modalOpen} setOpen={setModalOpen} {...modalData}></Modal>
+
+        {debug && (
+          <div className="fixed left-0 top-20 flex flex-col">
+            {new Date(today ? today : Date.now()).toISOString()}
+            <button onClick={() => localStorage.removeItem("deckSrsData")}>delete deck data</button>
+          </div>
+        )}
       </div>
     </>
   );
