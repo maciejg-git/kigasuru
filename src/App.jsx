@@ -119,6 +119,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
   const scheduler = useRef(fsrs());
+  const [, forceUpdate] = useState(0);
 
   useEffect(() => {
     localStorage.setItem("deck", JSON.stringify(deck));
@@ -196,13 +197,21 @@ function App() {
     setPage("deck");
   }
 
-  function handleSuspendCards(cardsId) {
+  function handleSuspendCards(cardId) {
+    let cardData = getCardData(cardId)
+    cardData.suspended = !cardData.suspended
+    localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
+    forceUpdate((t) => t + 1);
+  }
+
+  function handleResetCards(cardsId) {
     let ids = [...cardsId]
     ids.forEach((id) => {
-      let cardData = getCardData(id)
-      cardData.suspended = true
+      let cardData = {...defaultCardData}
+      deckSrsData.current[id] = cardData;
     })
     localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
+    forceUpdate((t) => t + 1);
   }
 
   return (
@@ -239,11 +248,12 @@ function App() {
             <motion.div className="content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <Deck
                 deck={deck}
-                deckSrsData={deckSrsData}
+                deckSrsData={{...deckSrsData}}
                 onCardDataUpdate={handleCardDataUpdate}
                 setModalOpen={setModalOpen}
                 setModalData={setModalData}
                 onSuspend={handleSuspendCards}
+                onReset={handleResetCards}
               ></Deck>
             </motion.div>
           )}

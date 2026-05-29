@@ -1,44 +1,43 @@
-import Button from "./Button.jsx"
-import { State } from "ts-fsrs"
+import Button from "./Button.jsx";
+import { State } from "ts-fsrs";
 
-export default function Home({onClickStart, data, deckSrsData}) {
-  let newCardsCount = Object.keys(deckSrsData.current).length
+export default function Home({ onClickStart, data, deckSrsData }) {
+  let newCardsCount = Object.values(deckSrsData.current).filter((card) => {
+    return card.fsrs.state === State.New;
+  });
+
+  let initializedCardsCount = Object.keys(deckSrsData.current);
+
+  let suspendedCardCount = Object.values(deckSrsData.current).filter((card) => {
+    return card.suspended;
+  });
+
   let reviewCardsCount = Object.values(deckSrsData.current).filter((card) => {
-    return card.fsrs.state === State.Review
-  })
+    return card.fsrs.state === State.Review;
+  });
 
   return (
     <div className="flex h-full">
       <div className="my-auto mx-auto flex flex-col gap-y-16">
         <div className="flex flex-col items-center">
-          <span className="text-xl font-semibold mb-4">
-            {data.name}
-          </span>
+          <span className="text-xl font-semibold mb-4">{data.name}</span>
           <table>
             <tbody>
               <tr className="*:px-4 *:py-1">
+                <td>Cards</td>
+                <td>{data.cards.length}</td>
+              </tr>
+              <tr className="*:px-4 *:py-1">
+                <td>New cards</td>
                 <td>
-                  Cards
-                </td>
-                <td>
-                  {data.cards.length}
+                  {data.cards.length -
+                    (initializedCardsCount.length - newCardsCount.length) -
+                    suspendedCardCount.length}
                 </td>
               </tr>
               <tr className="*:px-4 *:py-1">
-                <td>
-                  New cards
-                </td>
-                <td>
-                  {data.cards.length - newCardsCount}
-                </td>
-              </tr>
-              <tr className="*:px-4 *:py-1">
-                <td>
-                  Reviews
-                </td>
-                <td>
-                  {reviewCardsCount.length}
-                </td>
+                <td>Reviews</td>
+                <td>{reviewCardsCount.length}</td>
               </tr>
             </tbody>
           </table>
@@ -48,5 +47,5 @@ export default function Home({onClickStart, data, deckSrsData}) {
         </Button>
       </div>
     </div>
-  )
+  );
 }

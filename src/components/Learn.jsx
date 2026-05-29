@@ -4,6 +4,7 @@ import Button from "./Button.jsx";
 import BottomBar from "./BottomBar.jsx";
 import { useKeyboard } from "../hooks/use-keyboard.js";
 import { State } from "ts-fsrs";
+import LearnMoreDropdown from "./LearnMoreDropdown.jsx";
 
 export default function Learn({ newCardsProp, reviewCardsProp, onCardDataUpdate, onLearnFinish }) {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -165,7 +166,9 @@ export default function Learn({ newCardsProp, reviewCardsProp, onCardDataUpdate,
           )}
         </div>
         <div className="flex flex-1 justify-end">
-          <Button className="bg-lime-300 hover:bg-lime-200">More</Button>
+          <LearnMoreDropdown>
+            <Button className="bg-lime-300 hover:bg-lime-200">More</Button>
+          </LearnMoreDropdown>
         </div>
       </BottomBar>
     </>

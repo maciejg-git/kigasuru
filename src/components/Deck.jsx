@@ -4,8 +4,10 @@ import Button from "./Button.jsx";
 import Input from "./Input.jsx";
 import { OptionsContext } from "../options-context.js";
 import clsx from "clsx";
+import { State } from "ts-fsrs"
+import DeckMoreDropdown from "./DeckMoreDropdown.jsx";
 
-export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, onSuspend }) {
+export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, onSuspend, onReset }) {
   const options = useContext(OptionsContext);
 
   const [selectedItems, setSelectedItems] = useState(new Set());
@@ -14,13 +16,18 @@ export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, on
 
   function getCardDue(id) {
     let cardData = deckSrsData.current[id];
-    if (!cardData || cardData.suspended) {
+    if (!cardData || cardData.fsrs.state === State.New || cardData.suspended) {
       return null;
     }
-    return cardData.fsrs.due;
+    return new Date(cardData.fsrs.due).toISOString().substring(0, 10);
   }
 
   function isSuspended(id) {
+    return deckSrsData.current[id]?.suspended === true;
+  }
+
+  function isOnlySelectedCardSuspended() {
+    let id = selectedItems.values().next().value;
     return deckSrsData.current[id]?.suspended;
   }
 
@@ -66,14 +73,8 @@ export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, on
   }
 
   function handleSuspendClick() {
-    setModalData({
-      title: "Suspend cards",
-      message: `Suspend ${selectedItems.size} cards`,
-      labelAccept: "OK",
-      labelCancel: "Cancel",
-      onAccept: () => onSuspend(selectedItems),
-    });
-    setModalOpen(true);
+    let id = selectedItems.values().next().value
+    onSuspend(id)
   }
 
   function handleResetClick() {
@@ -82,6 +83,7 @@ export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, on
       message: `Reset ${selectedItems.size} cards`,
       labelAccept: "OK",
       labelCancel: "Cancel",
+      onAccept: () => onReset(selectedItems)
     });
     setModalOpen(true);
   }
@@ -115,14 +117,16 @@ export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, on
               )}
             </div>
             <div className="flex gap-x-4">
-              {!!selectedItems.size && (
+              {selectedItems.size > 0 && (
                 <>
-                  <Button
-                    className="bg-yellow-300 hover:bg-yellow-200"
-                    onClick={handleSuspendClick}
-                  >
-                    Suspend
-                  </Button>
+                  {selectedItems.size === 1 && (
+                    <Button
+                      className="bg-yellow-300 hover:bg-yellow-200"
+                      onClick={handleSuspendClick}
+                    >
+                      {isOnlySelectedCardSuspended() ? "Unsuspend" : "Suspend"}
+                    </Button>
+                  )}
                   <Button className="bg-yellow-300 hover:bg-yellow-200" onClick={handleResetClick}>
                     Reset
                   </Button>
@@ -131,7 +135,9 @@ export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, on
               )}
             </div>
             <div className="flex flex-1 justify-end gap-x-4">
-              <Button className="bg-lime-300 hover:bg-lime-200">More</Button>
+              <DeckMoreDropdown>
+                <Button className="bg-lime-300 hover:bg-lime-200">More</Button>
+              </DeckMoreDropdown>
             </div>
           </>
         )}
@@ -195,16 +201,16 @@ function DeckTable({ deck, onItemClick, selectedItems, getCardDue, isSuspended }
                   "bg-neutral-100 dark:bg-gray-700": selectedItems.has(card.id),
                 })}
               >
-                <td className={isSuspended(card.id) && "opacity-30"}>{card.word}</td>
+                <td className={clsx(isSuspended(card.id) && "opacity-30")}>{card.word}</td>
                 <td className={clsx("text-sm", isSuspended(card.id) && "opacity-30")}>
                   {card.example_sentence}
                 </td>
                 <td>{card.translation}</td>
                 <td>
-                  {getCardDue(card.id) || isSuspended(card.id) ? (
+                  {isSuspended(card.id) ? (
                     <Badge variant="warn">Suspended</Badge>
                   ) : (
-                    <Badge variant="success">New</Badge>
+                    getCardDue(card.id) || <Badge variant="success">New</Badge>
                   )}
                 </td>
               </tr>

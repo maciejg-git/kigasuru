@@ -3,7 +3,7 @@ import { State } from 'ts-fsrs'
 function calculateLearnCards(data, cardsData, today, newCardsLimit) {
   let newCards = data
     .filter((card) => {
-      return !cardsData[card.id]
+      return !cardsData[card.id] || (cardsData[card.id].fsrs.state === State.New && !cardsData[card.id].suspended)
     })
     .splice(0, newCardsLimit);
 
