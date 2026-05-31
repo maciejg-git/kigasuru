@@ -10,7 +10,7 @@ export default function Options({ options, setOptions }) {
   let showJisho = useId();
 
   return (
-    <div className="flex w-full flex-col gap-y-6 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-800">
+    <div className="flex w-full flex-col gap-y-6 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-800 max-w-5xl mx-auto">
       <OptionHeader>Daily limits</OptionHeader>
       <div className="flex flex-col gap-y-4">
         <div className="flex items-center">

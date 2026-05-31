@@ -94,7 +94,7 @@ export default function Deck({ deck, deckSrsData, setModalOpen, setModalData, on
 
       {page === "deck" && (
         <DeckTable
-          deck={deck}
+          deck={deck.cards.slice(0, 100)}
           onItemClick={handleItemClick}
           selectedItems={selectedItems}
           getCardDue={getCardDue}
@@ -181,7 +181,7 @@ function DeckEditCard({ card }) {
 
 function DeckTable({ deck, onItemClick, selectedItems, getCardDue, isSuspended }) {
   return (
-    <div className="w-full rounded-xl border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-600 dark:bg-gray-800">
+    <div className="w-full rounded-xl border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-600 dark:bg-gray-800 overflow-y-auto max-h-[calc(100vh-14rem)]">
       <table className="w-full text-lg">
         <thead className="font-semibold">
           <tr className="*:p-2 border-b border-gray-300 dark:border-gray-500">
@@ -192,7 +192,7 @@ function DeckTable({ deck, onItemClick, selectedItems, getCardDue, isSuspended }
           </tr>
         </thead>
         <tbody>
-          {deck.cards.map((card) => {
+          {deck.map((card) => {
             return (
               <tr
                 key={card.id}

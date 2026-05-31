@@ -1,4 +1,5 @@
 import { State } from 'ts-fsrs'
+import { isBefore } from 'date-fns';
 
 function calculateLearnCards(data, cardsData, today, newCardsLimit) {
   let newCards = data
@@ -7,18 +8,18 @@ function calculateLearnCards(data, cardsData, today, newCardsLimit) {
     })
     .splice(0, newCardsLimit);
 
-  let dueCards = getDueCards(data, cardsData, today)
+  let dueCards = getCardsToReview(data, cardsData, today)
 
   return [newCards, dueCards];
 }
 
-function getDueCards(data, cardsData, today) {
+function getCardsToReview(data, cardsData, today) {
   return data.filter((card) => {
     let cardData = cardsData[card.id]
     if (cardData) {
       let due = new Date(cardData.fsrs.due)
       let review = cardData.fsrs.state === State.Review
-      return due <= today && review
+      return isBefore(due, today) && review
     }
   })
 }

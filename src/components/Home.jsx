@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import Button from "./Button.jsx";
 import { State } from "ts-fsrs";
+import { isBefore } from "date-fns";
+import { DateContext } from "../date-context.js";
 
 export default function Home({ onClickStart, data, deckSrsData }) {
+  let today = useContext(DateContext)
+
   let newCardsCount = Object.values(deckSrsData.current).filter((card) => {
     return card.fsrs.state === State.New;
   });
@@ -13,7 +18,7 @@ export default function Home({ onClickStart, data, deckSrsData }) {
   });
 
   let reviewCardsCount = Object.values(deckSrsData.current).filter((card) => {
-    return card.fsrs.state === State.Review;
+    return card.fsrs.state === State.Review && isBefore(card.fsrs.due, today);
   });
 
   return (

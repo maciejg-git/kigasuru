@@ -1,0 +1,3502 @@
+[
+  {
+    "id": 1,
+    "word": "学生",
+    "romaji": "gakusei",
+    "translation": "Student",
+    "example_sentence": "私は日本語の学生です。"
+  },
+  {
+    "id": 2,
+    "word": "美味しい",
+    "romaji": "oishii",
+    "translation": "Delicious",
+    "example_sentence": "このラーメンはとても美味しいです。"
+  },
+  {
+    "id": 3,
+    "word": "明日",
+    "romaji": "ashita",
+    "translation": "Tomorrow",
+    "example_sentence": "明日の天気は晴れだと思います。"
+  },
+  {
+    "id": 4,
+    "word": "歩く",
+    "romaji": "aruku",
+    "translation": "To walk",
+    "example_sentence": "毎朝、駅まで歩きます。"
+  },
+  {
+    "id": 5,
+    "word": "友達",
+    "romaji": "tomodachi",
+    "translation": "Friend",
+    "example_sentence": "週末に友達と映画を見ました。"
+  },
+  {
+    "id": 6,
+    "word": "先生",
+    "romaji": "sensei",
+    "translation": "Teacher",
+    "example_sentence": "先生、この漢字の読み方を教えてください。"
+  },
+  {
+    "id": 7,
+    "word": "本",
+    "romaji": "hon",
+    "translation": "Book",
+    "example_sentence": "図書館で新しい本を三冊借りました。"
+  },
+  {
+    "id": 8,
+    "word": "食べる",
+    "romaji": "taberu",
+    "translation": "To eat",
+    "example_sentence": "一緒に晩ご飯を食べましょう。"
+  },
+  {
+    "id": 9,
+    "word": "車",
+    "romaji": "kuruma",
+    "translation": "Car",
+    "example_sentence": "父は青い車を運転しています。"
+  },
+  {
+    "id": 10,
+    "word": "高い",
+    "romaji": "takai",
+    "translation": "High / Expensive",
+    "example_sentence": "あの山はとても高いです。"
+  },
+  {
+    "id": 11,
+    "word": "時計",
+    "romaji": "tokei",
+    "translation": "Watch / Clock",
+    "example_sentence": "この時計は祖父からのプレゼントです。"
+  },
+  {
+    "id": 12,
+    "word": "飲む",
+    "romaji": "nomu",
+    "translation": "To drink",
+    "example_sentence": "朝はいつもコーヒーを飲みます。"
+  },
+  {
+    "id": 13,
+    "word": "水",
+    "romaji": "mizu",
+    "translation": "Water",
+    "example_sentence": "冷たい水を一杯ください。"
+  },
+  {
+    "id": 14,
+    "word": "簡単",
+    "romaji": "kantan",
+    "translation": "Easy / Simple",
+    "example_sentence": "今日のテストは意外と簡単でした。"
+  },
+  {
+    "id": 15,
+    "word": "走る",
+    "romaji": "hashiru",
+    "translation": "To run",
+    "example_sentence": "遅刻しそうなので走ります。"
+  },
+  {
+    "id": 16,
+    "word": "家族",
+    "romaji": "kazoku",
+    "translation": "Family",
+    "example_sentence": "私の家族はみんな元気です。"
+  },
+  {
+    "id": 17,
+    "word": "買う",
+    "romaji": "kau",
+    "translation": "To buy",
+    "example_sentence": "スーパーで野菜を買いました。"
+  },
+  {
+    "id": 18,
+    "word": "犬",
+    "romaji": "inu",
+    "translation": "Dog",
+    "example_sentence": "公園で可愛い犬を見かけました。"
+  },
+  {
+    "id": 19,
+    "word": "新しい",
+    "romaji": "atarashii",
+    "translation": "New",
+    "example_sentence": "新しいスマートフォンを買いたいです。"
+  },
+  {
+    "id": 20,
+    "word": "聞く",
+    "romaji": "kiku",
+    "translation": "To listen / To hear",
+    "example_sentence": "毎日、日本の音楽を聞いています。"
+  },
+  {
+    "id": 21,
+    "word": "部屋",
+    "romaji": "heya",
+    "translation": "Room",
+    "example_sentence": "私の部屋はあまり広くないです。"
+  },
+  {
+    "id": 22,
+    "word": "話す",
+    "romaji": "hanasu",
+    "translation": "To speak",
+    "example_sentence": "日本語で話すのは難しいですが楽しいです。"
+  },
+  {
+    "id": 23,
+    "word": "猫",
+    "romaji": "neko",
+    "translation": "Cat",
+    "example_sentence": "あの猫はいつも窓の近くにいます。"
+  },
+  {
+    "id": 24,
+    "word": "古い",
+    "romaji": "furui",
+    "translation": "Old",
+    "example_sentence": "ここには古いお寺がたくさんあります。"
+  },
+  {
+    "id": 25,
+    "word": "書く",
+    "romaji": "kaku",
+    "translation": "To write",
+    "example_sentence": "ノートに漢字を何回も書きます。"
+  },
+  {
+    "id": 26,
+    "word": "携帯",
+    "romaji": "keitai",
+    "translation": "Mobile phone",
+    "example_sentence": "携帯を家に忘れてしまいました。"
+  },
+  {
+    "id": 27,
+    "word": "見る",
+    "romaji": "miru",
+    "translation": "To see / To watch",
+    "example_sentence": "夜休む前にアニメを見ます。"
+  },
+  {
+    "id": 28,
+    "word": "辞書",
+    "romaji": "jisho",
+    "translation": "Dictionary",
+    "example_sentence": "分からない単語は辞書で調べます。"
+  },
+  {
+    "id": 29,
+    "word": "待つ",
+    "romaji": "matsu",
+    "translation": "To wait",
+    "example_sentence": "ハチ公の前で友達を待っています。"
+  },
+  {
+    "id": 30,
+    "word": "傘",
+    "romaji": "kasa",
+    "translation": "Umbrella",
+    "example_sentence": "雨が降りそうなので傘を持って行きます。"
+  },
+  {
+    "id": 31,
+    "word": "作る",
+    "romaji": "tsukuru",
+    "translation": "To make",
+    "example_sentence": "今日の昼ご飯は自分で作りました。"
+  },
+  {
+    "id": 32,
+    "word": "鍵",
+    "romaji": "kagi",
+    "translation": "Key",
+    "example_sentence": "カバンの中から鍵が見つかりません。"
+  },
+  {
+    "id": 33,
+    "word": "泳ぐ",
+    "romaji": "oyogu",
+    "translation": "To swim",
+    "example_sentence": "夏休みに海で泳ぎたいです。"
+  },
+  {
+    "id": 34,
+    "word": "駅",
+    "romaji": "eki",
+    "translation": "Station",
+    "example_sentence": "新宿駅はとても広くて迷いやすいです。"
+  },
+  {
+    "id": 35,
+    "word": "呼ぶ",
+    "romaji": "yobu",
+    "translation": "To call",
+    "example_sentence": "荷物が多いのでタクシーを呼びます。"
+  },
+  {
+    "id": 36,
+    "word": "飛行機",
+    "romaji": "hikouki",
+    "translation": "Airplane",
+    "example_sentence": "飛行機から綺麗な雲が見えました。"
+  },
+  {
+    "id": 37,
+    "word": "会う",
+    "romaji": "au",
+    "translation": "To meet",
+    "example_sentence": "久しぶりに幼馴染に会いました。"
+  },
+  {
+    "id": 38,
+    "word": "映画",
+    "romaji": "eiga",
+    "translation": "Movie",
+    "example_sentence": "あの映画はとても感動的でした。"
+  },
+  {
+    "id": 39,
+    "word": "歌う",
+    "romaji": "utau",
+    "translation": "To sing",
+    "example_sentence": "カラオケで好きな歌を歌いました。"
+  },
+  {
+    "id": 40,
+    "word": "空港",
+    "romaji": "kuukou",
+    "translation": "Airport",
+    "example_sentence": "成田空港行きの電車に乗っています。"
+  },
+  {
+    "id": 41,
+    "word": "教える",
+    "romaji": "oshieru",
+    "translation": "To teach / To tell",
+    "example_sentence": "おすすめのレストランを教えてください。"
+  },
+  {
+    "id": 42,
+    "word": "手紙",
+    "romaji": "tegami",
+    "translation": "Letter",
+    "example_sentence": "田舎の祖父母へ手紙を書きました。"
+  },
+  {
+    "id": 43,
+    "word": "遊ぶ",
+    "romaji": "asobu",
+    "translation": "To play",
+    "example_sentence": "子供たちが公園で元気に遊んでいます。"
+  },
+  {
+    "id": 44,
+    "word": "料理",
+    "romaji": "ryouri",
+    "translation": "Cooking / Cuisine",
+    "example_sentence": "日本料理の中では寿司が一番好きです。"
+  },
+  {
+    "id": 45,
+    "word": "休む",
+    "romaji": "yasumu",
+    "translation": "To rest / To take a break",
+    "example_sentence": "少し疲れたので、ここで休みましょう。"
+  },
+  {
+    "id": 46,
+    "word": "電気",
+    "romaji": "denki",
+    "translation": "Electricity / Light",
+    "example_sentence": "部屋を出るときは電気を消してください。"
+  },
+  {
+    "id": 47,
+    "word": "知る",
+    "romaji": "shiru",
+    "translation": "To know",
+    "example_sentence": "そのニュースはもう知っています。"
+  },
+  {
+    "id": 48,
+    "word": "鞄",
+    "romaji": "kaban",
+    "translation": "Bag",
+    "example_sentence": "この鞄は軽くて使いやすいです。"
+  },
+  {
+    "id": 49,
+    "word": "座る",
+    "romaji": "suwaru",
+    "translation": "To sit",
+    "example_sentence": "どうぞ、こちらの椅子に座ってください。"
+  },
+  {
+    "id": 50,
+    "word": "窓",
+    "romaji": "mado",
+    "translation": "Window",
+    "example_sentence": "部屋が暑いので窓を開けましょう。"
+  },
+  {
+    "id": 51,
+    "word": "出かける",
+    "romaji": "dekakeru",
+    "translation": "To go out",
+    "example_sentence": "休日はいつもどこかへ出かけます。"
+  },
+  {
+    "id": 52,
+    "word": "帽子",
+    "romaji": "boushi",
+    "translation": "Hat / Cap",
+    "example_sentence": "日差しが強いので帽子をかぶります。"
+  },
+  {
+    "id": 53,
+    "word": "洗う",
+    "romaji": "arau",
+    "translation": "To wash",
+    "example_sentence": "ご飯を食べる前に手を洗います。"
+  },
+  {
+    "id": 54,
+    "word": "靴",
+    "romaji": "kutsu",
+    "translation": "Shoes",
+    "example_sentence": "新しいスニーカーの靴を買いました。"
+  },
+  {
+    "id": 55,
+    "word": "開ける",
+    "romaji": "akeru",
+    "translation": "To open",
+    "example_sentence": "ドアを開けて中に入ってください。"
+  },
+  {
+    "id": 56,
+    "word": "宿題",
+    "romaji": "shukudai",
+    "translation": "Homework",
+    "example_sentence": "学校の宿題がまだ終わっていません。"
+  },
+  {
+    "id": 57,
+    "word": "閉める",
+    "romaji": "shimeru",
+    "translation": "To close",
+    "example_sentence": "寒いのでカーテンを閉めてください。"
+  },
+  {
+    "id": 58,
+    "word": "新聞",
+    "romaji": "shinbun",
+    "translation": "Newspaper",
+    "example_sentence": "祖父は毎朝新聞を読んでいます。"
+  },
+  {
+    "id": 59,
+    "word": "帰る",
+    "romaji": "kaeru",
+    "translation": "To return home",
+    "example_sentence": "今日は仕事が終わったら早く帰ります。"
+  },
+  {
+    "id": 60,
+    "word": "お茶",
+    "romaji": "ocha",
+    "translation": "Tea / Green tea",
+    "example_sentence": "温かいお茶を飲んでリラックスします。"
+  },
+  {
+    "id": 61,
+    "word": "忘れる",
+    "romaji": "wasureru",
+    "translation": "To forget",
+    "example_sentence": "大切な約束を忘れてしまいました。"
+  },
+  {
+    "id": 62,
+    "word": "銀行",
+    "romaji": "ginkou",
+    "translation": "Bank",
+    "example_sentence": "お金を下ろすために銀行へ行きます。"
+  },
+  {
+    "id": 63,
+    "word": "死ぬ",
+    "romaji": "shinu",
+    "translation": "To die",
+    "example_sentence": "その古い物語の主人公は最後に死ぬ。"
+  },
+  {
+    "id": 64,
+    "word": "地図",
+    "romaji": "chizu",
+    "translation": "Map",
+    "example_sentence": "スマートフォンの地図を見ながら歩きます。"
+  },
+  {
+    "id": 65,
+    "word": "探す",
+    "romaji": "sagasu",
+    "translation": "To search for",
+    "example_sentence": "失くしたイヤホンを探しています。"
+  },
+  {
+    "id": 66,
+    "word": "病院",
+    "romaji": "byouin",
+    "translation": "Hospital",
+    "example_sentence": "体の調子が悪いので病院へ行きます。"
+  },
+  {
+    "id": 67,
+    "word": "頼む",
+    "romaji": "tanomu",
+    "translation": "To request / To order",
+    "example_sentence": "レストランでデザートを頼みました。"
+  },
+  {
+    "id": 68,
+    "word": "薬",
+    "romaji": "kusuri",
+    "translation": "Medicine",
+    "example_sentence": "食後にこの薬を飲んでください。"
+  },
+  {
+    "id": 69,
+    "word": "借りる",
+    "romaji": "kariru",
+    "translation": "To borrow",
+    "example_sentence": "友達から面白い漫画を借りました。"
+  },
+  {
+    "id": 70,
+    "word": "手",
+    "romaji": "te",
+    "translation": "Hand",
+    "example_sentence": "寒いときは手をポケットに入れます。"
+  },
+  {
+    "id": 71,
+    "word": "返す",
+    "romaji": "kaesu",
+    "translation": "To return (an object)",
+    "example_sentence": "明日までに借りた本を返します。"
+  },
+  {
+    "id": 72,
+    "word": "目",
+    "romaji": "me",
+    "translation": "Eye",
+    "example_sentence": "パソコンを使いすぎて目が疲れました。"
+  },
+  {
+    "id": 73,
+    "word": "始まる",
+    "romaji": "hajimaru",
+    "translation": "To begin",
+    "example_sentence": "もうすぐお気に入りの番組が始まります。"
+  },
+  {
+    "id": 74,
+    "word": "耳",
+    "romaji": "mimi",
+    "translation": "Ear",
+    "example_sentence": "冬の風が冷たくて耳が痛いです。"
+  },
+  {
+    "id": 75,
+    "word": "終わる",
+    "romaji": "owaru",
+    "translation": "To end",
+    "example_sentence": "やっと今日の授業が終わりました。"
+  },
+  {
+    "id": 76,
+    "word": "口",
+    "romaji": "kuchi",
+    "translation": "Mouth",
+    "example_sentence": "口を開けて「あー」と言ってください。"
+  },
+  {
+    "id": 77,
+    "word": "働く",
+    "romaji": "hataraku",
+    "translation": "To work",
+    "example_sentence": "兄は東京のIT企業で働いています。"
+  },
+  {
+    "id": 78,
+    "word": "足",
+    "romaji": "ashi",
+    "translation": "Leg / Foot",
+    "example_sentence": "たくさん歩いたので足が棒のようです。"
+  },
+  {
+    "id": 79,
+    "word": "起きる",
+    "romaji": "okiru",
+    "translation": "To wake up / To occur",
+    "example_sentence": "毎朝六時に起きるようにしています。"
+  },
+  {
+    "id": 80,
+    "word": "頭",
+    "romaji": "atama",
+    "translation": "Head",
+    "example_sentence": "考えすぎて頭が痛くなってきました。"
+  },
+  {
+    "id": 81,
+    "word": "寝る",
+    "romaji": "neru",
+    "translation": "To sleep",
+    "example_sentence": "昨日は夜遅くまで寝られませんでした。"
+  },
+  {
+    "id": 82,
+    "word": "体",
+    "romaji": "karada",
+    "translation": "Body",
+    "example_sentence": "健康のために体を動かしましょう。"
+  },
+  {
+    "id": 83,
+    "word": "乗る",
+    "romaji": "noru",
+    "translation": "To ride / To board",
+    "example_sentence": "ここから地下鉄に乗ると早いです。"
+  },
+  {
+    "id": 84,
+    "word": "会社",
+    "romaji": "kaisha",
+    "translation": "Company",
+    "example_sentence": "明日は会社が休みなので嬉しいです。"
+  },
+  {
+    "id": 85,
+    "word": "降りる",
+    "romaji": "oriru",
+    "translation": "To disembark / To go down",
+    "example_sentence": "次のバス停でバスを降ります。"
+  },
+  {
+    "id": 86,
+    "word": "仕事",
+    "romaji": "shigoto",
+    "translation": "Work / Job",
+    "example_sentence": "新しい仕事にもう慣れましたか？"
+  },
+  {
+    "id": 87,
+    "word": "使う",
+    "romaji": "utsau",
+    "translation": "To use",
+    "example_sentence": "このアプリは無料で使えます。"
+  },
+  {
+    "id": 88,
+    "word": "電話",
+    "romaji": "denwa",
+    "translation": "Telephone",
+    "example_sentence": "先ほど、母から電話がありました。"
+  },
+  {
+    "id": 89,
+    "word": "到着する",
+    "romaji": "touchaku suru",
+    "translation": "To arrive",
+    "example_sentence": "予定通りに京都に到着しました。"
+  },
+  {
+    "id": 90,
+    "word": "食堂",
+    "romaji": "shokudou",
+    "translation": "Cafeteria / Dining hall",
+    "example_sentence": "大学の食堂は安くてボリュームがあります。"
+  },
+  {
+    "id": 91,
+    "word": "出発する",
+    "romaji": "shuppatsu suru",
+    "translation": "To depart",
+    "example_sentence": "バスは午前八時に出発します。"
+  },
+  {
+    "id": 92,
+    "word": "売店",
+    "romaji": "baiten",
+    "translation": "Stall / Kiosk",
+    "example_sentence": "駅の売店で週刊誌を買いました。"
+  },
+  {
+    "id": 93,
+    "word": "洗面所",
+    "romaji": "senmenjo",
+    "translation": "Washroom",
+    "example_sentence": "洗面所で歯を磨いてきます。"
+  },
+  {
+    "id": 94,
+    "word": "服",
+    "romaji": "fuku",
+    "translation": "Clothes",
+    "example_sentence": "衣替えの季節なので服を整理します。"
+  },
+  {
+    "id": 95,
+    "word": "選ぶ",
+    "romaji": "erabu",
+    "translation": "To choose",
+    "example_sentence": "どれにするかメニューから選んでください。"
+  },
+  {
+    "id": 96,
+    "word": "切符",
+    "romaji": "kippu",
+    "translation": "Ticket",
+    "example_sentence": "電車の切符を失くさないでね。"
+  },
+  {
+    "id": 97,
+    "word": "運ぶ",
+    "romaji": "hakobu",
+    "translation": "To carry",
+    "example_sentence": "この重い段ボールを運んでください。"
+  },
+  {
+    "id": 98,
+    "word": "教室",
+    "romaji": "kyoushitsu",
+    "translation": "Classroom",
+    "example_sentence": "放課後の教室には誰もいません。"
+  },
+  {
+    "id": 99,
+    "word": "歌",
+    "romaji": "uta",
+    "translation": "Song",
+    "example_sentence": "この歌を聞くと昔を思い出します。"
+  },
+  {
+    "id": 100,
+    "word": "意味",
+    "romaji": "imi",
+    "translation": "Meaning",
+    "example_sentence": "この単語の意味が分かりません。"
+  },
+  {
+    "id": 101,
+    "word": "広い",
+    "romaji": "hiroi",
+    "translation": "Wide / Spacious",
+    "example_sentence": "この公園の広場はとても広いです。"
+  },
+  {
+    "id": 102,
+    "word": "狭い",
+    "romaji": "semai",
+    "translation": "Narrow / Cramped",
+    "example_sentence": "日本の住宅は狭いと言われがちです。"
+  },
+  {
+    "id": 103,
+    "word": "重い",
+    "romaji": "omoi",
+    "translation": "Heavy",
+    "example_sentence": "このスーツケースはすごく重いです。"
+  },
+  {
+    "id": 104,
+    "word": "軽い",
+    "romaji": "karui",
+    "translation": "Light (weight)",
+    "example_sentence": "最新のノートパソコンはとても軽いです。"
+  },
+  {
+    "id": 105,
+    "word": "暗い",
+    "romaji": "kurai",
+    "translation": "Dark",
+    "example_sentence": "外はもうすっかり暗くなりました。"
+  },
+  {
+    "id": 106,
+    "word": "明るい",
+    "romaji": "akarui",
+    "translation": "Bright / Cheerful",
+    "example_sentence": "彼女は明るい性格で人気があります。"
+  },
+  {
+    "id": 107,
+    "word": "早い",
+    "romaji": "hayai",
+    "translation": "Early",
+    "example_sentence": "明日から旅行なので朝早いです。"
+  },
+  {
+    "id": 108,
+    "word": "遅い",
+    "romaji": "osoi",
+    "translation": "Late / Slow",
+    "example_sentence": "夜遅くに電話してすみません。"
+  },
+  {
+    "id": 109,
+    "word": "冷たい",
+    "romaji": "tsumetai",
+    "translation": "Cold (to touch)",
+    "example_sentence": "冷たいジュースを飲みました。"
+  },
+  {
+    "id": 110,
+    "word": "熱い",
+    "romaji": "atsui",
+    "translation": "Hot (to touch)",
+    "example_sentence": "このスープはまだ熱いので気をつけて。"
+  },
+  {
+    "id": 111,
+    "word": "暑い",
+    "romaji": "atsui",
+    "translation": "Hot (weather)",
+    "example_sentence": "日本の夏はとても蒸し暑いです。"
+  },
+  {
+    "id": 112,
+    "word": "寒い",
+    "romaji": "samui",
+    "translation": "Cold (weather)",
+    "example_sentence": "冬の北海道は非常に寒いです。"
+  },
+  {
+    "id": 113,
+    "word": "涼しい",
+    "romaji": "suzushii",
+    "translation": "Cool (weather)",
+    "example_sentence": "秋になると涼しい風が吹きます。"
+  },
+  {
+    "id": 114,
+    "word": "暖かい",
+    "romaji": "atatakai",
+    "translation": "Warm (weather)",
+    "example_sentence": "春は暖かい日が多くて過ごしやすい。"
+  },
+  {
+    "id": 115,
+    "word": "温かい",
+    "romaji": "atatakai",
+    "translation": "Warm (to touch / feelings)",
+    "example_sentence": "温かい心のこもったおもてなし。"
+  },
+  {
+    "id": 116,
+    "word": "面白い",
+    "romaji": "omashiroi",
+    "translation": "Interesting / Funny",
+    "example_sentence": "その小説はとても面白い展開だった。"
+  },
+  {
+    "id": 117,
+    "word": "つまらない",
+    "romaji": "tsumaranai",
+    "translation": "Boring",
+    "example_sentence": "つまらない話で時間を取らせました。"
+  },
+  {
+    "id": 118,
+    "word": "危ない",
+    "romaji": "abunai",
+    "translation": "Dangerous",
+    "example_sentence": "線路の近くは危ないので離れて。"
+  },
+  {
+    "id": 119,
+    "word": "安全",
+    "romaji": "anzen",
+    "translation": "Safe",
+    "example_sentence": "日本は治安が良くて安全な国です。"
+  },
+  {
+    "id": 120,
+    "word": "賑やか",
+    "romaji": "nigiyaka",
+    "translation": "Lively / Bustling",
+    "example_sentence": "お祭りの日の街は賑やかになります。"
+  },
+  {
+    "id": 121,
+    "word": "静か",
+    "romaji": "shizuka",
+    "translation": "Quiet",
+    "example_sentence": "夜の田舎はとても静かです。"
+  },
+  {
+    "id": 122,
+    "word": "親切",
+    "romaji": "shinsetsu",
+    "translation": "Kind",
+    "example_sentence": "駅員さんが親切に道を教えてくれた。"
+  },
+  {
+    "id": 123,
+    "word": "便利",
+    "romaji": "benri",
+    "translation": "Convenient",
+    "example_sentence": "コンビニは生活にとても便利です。"
+  },
+  {
+    "id": 124,
+    "word": "不便",
+    "romaji": "fuben",
+    "translation": "Inconvenient",
+    "example_sentence": "近くに店がないのでここは少し不便です。"
+  },
+  {
+    "id": 125,
+    "word": "元気",
+    "romaji": "genki",
+    "translation": "Healthy / Lively",
+    "example_sentence": "おじいちゃんは今日も元気です。"
+  },
+  {
+    "id": 126,
+    "word": "病気",
+    "romaji": "byouki",
+    "translation": "Illness / Sick",
+    "example_sentence": "病気のために会社を一日休みました。"
+  },
+  {
+    "id": 127,
+    "word": "暇",
+    "romaji": "hima",
+    "translation": "Free time / Leisure",
+    "example_sentence": "今週末、もし暇なら遊びませんか？"
+  },
+  {
+    "id": 128,
+    "word": "忙しい",
+    "romaji": "isogashii",
+    "translation": "Busy",
+    "example_sentence": "最近は期末テストで忙しいです。"
+  },
+  {
+    "id": 129,
+    "word": "有名",
+    "romaji": "yuumei",
+    "translation": "Famous",
+    "example_sentence": "富士山は世界的に有名な山です。"
+  },
+  {
+    "id": 130,
+    "word": "下手",
+    "romaji": "heta",
+    "translation": "Unskillful",
+    "example_sentence": "歌が下手なのでカラオケが苦手です。"
+  },
+  {
+    "id": 131,
+    "word": "上手",
+    "romaji": "jouzu",
+    "translation": "Skillful",
+    "example_sentence": "彼女は絵を描くのがとても上手です。"
+  },
+  {
+    "id": 132,
+    "word": "好き",
+    "romaji": "suki",
+    "translation": "Like",
+    "example_sentence": "私は日本の歴史が本当に好きです。"
+  },
+  {
+    "id": 133,
+    "word": "嫌い",
+    "romaji": "kirai",
+    "translation": "Dislike / Hate",
+    "example_sentence": "子供の頃は人参が嫌いでした。"
+  },
+  {
+    "id": 134,
+    "word": "魚",
+    "romaji": "sakana",
+    "translation": "Fish",
+    "example_sentence": "川で小さな魚を捕まえようとしました。"
+  },
+  {
+    "id": 135,
+    "word": "肉",
+    "romaji": "niku",
+    "translation": "Meat",
+    "example_sentence": "今夜は焼肉を食べに行きます。"
+  },
+  {
+    "id": 136,
+    "word": "野菜",
+    "romaji": "yasai",
+    "translation": "Vegetable",
+    "example_sentence": "健康を考えて毎日野菜を食べます。"
+  },
+  {
+    "id": 137,
+    "word": "果物",
+    "romaji": "kudamono",
+    "translation": "Fruit",
+    "example_sentence": "秋はたくさんの美味しい果物があります。"
+  },
+  {
+    "id": 138,
+    "word": "米",
+    "romaji": "kome",
+    "translation": "Rice (raw grain)",
+    "example_sentence": "実家から新しい米が送られてきました。"
+  },
+  {
+    "id": 139,
+    "word": "ご飯",
+    "romaji": "gohan",
+    "translation": "Meal / Cooked rice",
+    "example_sentence": "朝ご飯をしっかり食べましょう。"
+  },
+  {
+    "id": 140,
+    "word": "卵",
+    "romaji": "tamago",
+    "translation": "Egg",
+    "example_sentence": "毎朝、卵焼きを自分で作ります。"
+  },
+  {
+    "id": 141,
+    "word": "牛乳",
+    "romaji": "gyuunyuu",
+    "translation": "Milk",
+    "example_sentence": "牛乳を飲むと背が伸びると言われます。"
+  },
+  {
+    "id": 142,
+    "word": "砂糖",
+    "romaji": "satou",
+    "translation": "Sugar",
+    "example_sentence": "コーヒーに砂糖は入れない派です。"
+  },
+  {
+    "id": 143,
+    "word": "塩",
+    "romaji": "shio",
+    "translation": "Salt",
+    "example_sentence": "スイカに少し塩をかけると甘くなります。"
+  },
+  {
+    "id": 144,
+    "word": "醤油",
+    "romaji": "shouyu",
+    "translation": "Soy sauce",
+    "example_sentence": "豆腐に醤油を少しだけかけます。"
+  },
+  {
+    "id": 145,
+    "word": "お酒",
+    "romaji": "osake",
+    "translation": "Alcohol / Sake",
+    "example_sentence": "日本のお酒、日本酒を試してみたい。"
+  },
+  {
+    "id": 146,
+    "word": "ビール",
+    "romaji": "biiru",
+    "translation": "Beer",
+    "example_sentence": "仕事の後の冷たいビールは最高です。"
+  },
+  {
+    "id": 147,
+    "word": "ワイン",
+    "romaji": "wain",
+    "translation": "Wine",
+    "example_sentence": "イタリア製の赤ワインを買いました。"
+  },
+  {
+    "id": 148,
+    "word": "美味しい",
+    "romaji": "oishii",
+    "translation": "Tasty",
+    "example_sentence": "母が作ったクッキーは本当に美味しい。"
+  },
+  {
+    "id": 149,
+    "word": "不味い",
+    "romaji": "mazui",
+    "translation": "Bad tasting",
+    "example_sentence": "この薬は苦くてとても不味いです。"
+  },
+  {
+    "id": 150,
+    "word": "お腹",
+    "romaji": "onaka",
+    "translation": "Stomach",
+    "example_sentence": "お腹が空いたので何か食べたいです。"
+  },
+  {
+    "id": 151,
+    "word": "喉",
+    "romaji": "nodo",
+    "translation": "Throat",
+    "example_sentence": "カラオケのしすぎで喉が渇きました。"
+  },
+  {
+    "id": 152,
+    "word": "風邪",
+    "romaji": "kaze",
+    "translation": "Cold (illness)",
+    "example_sentence": "風邪をひいて熱が出てしまいました。"
+  },
+  {
+    "id": 153,
+    "word": "熱",
+    "romaji": "netsu",
+    "translation": "Fever / Heat",
+    "example_sentence": "おでこを触るとかなり熱があります。"
+  },
+  {
+    "id": 154,
+    "word": "医者",
+    "romaji": "isha",
+    "translation": "Doctor",
+    "example_sentence": "私の将来の夢は医者になることです。"
+  },
+  {
+    "id": 155,
+    "word": "看護師",
+    "romaji": "kangoshi",
+    "translation": "Nurse",
+    "example_sentence": "看護師さんが優しく対応してくれた。"
+  },
+  {
+    "id": 156,
+    "word": "薬局",
+    "romaji": "yakkyoku",
+    "translation": "Pharmacy",
+    "example_sentence": "処方箋を持って近くの薬局へ向かう。"
+  },
+  {
+    "id": 157,
+    "word": "一昨日",
+    "romaji": "ototoi",
+    "translation": "Day before yesterday",
+    "example_sentence": "一昨日の夜、大きな地震がありました。"
+  },
+  {
+    "id": 158,
+    "word": "昨日",
+    "romaji": "kinou",
+    "translation": "Yesterday",
+    "example_sentence": "昨日は一日中家でゴロゴロしていました。"
+  },
+  {
+    "id": 159,
+    "word": "今日",
+    "romaji": "kyou",
+    "translation": "Today",
+    "example_sentence": "今日の夜は友達の誕生日パーティーです。"
+  },
+  {
+    "id": 160,
+    "word": "明日",
+    "romaji": "ashita",
+    "translation": "Tomorrow",
+    "example_sentence": "明日は朝から大事な会議があります。"
+  },
+  {
+    "id": 161,
+    "word": "明後日",
+    "romaji": "asatte",
+    "translation": "Day after tomorrow",
+    "example_sentence": "明後日から学校の夏休みが始まります。"
+  },
+  {
+    "id": 162,
+    "word": "毎日",
+    "romaji": "mainichi",
+    "translation": "Every day",
+    "example_sentence": "毎日欠かさず日本語を勉強します。"
+  },
+  {
+    "id": 163,
+    "word": "毎週",
+    "romaji": "maishu",
+    "translation": "Every week",
+    "example_sentence": "毎週日曜日にジムへ行っています。"
+  },
+  {
+    "id": 164,
+    "word": "毎月",
+    "romaji": "maitsuki",
+    "translation": "Every month",
+    "example_sentence": "毎月お小遣いをいくらか貯金します。"
+  },
+  {
+    "id": 165,
+    "word": "毎年",
+    "romaji": "maitoshi",
+    "translation": "Every year",
+    "example_sentence": "毎年家族で沖縄に旅行に行きます。"
+  },
+  {
+    "id": 166,
+    "word": "今週",
+    "romaji": "konshuu",
+    "translation": "This week",
+    "example_sentence": "今週はとても仕事が忙しいです。"
+  },
+  {
+    "id": 167,
+    "word": "来週",
+    "romaji": "raishuu",
+    "translation": "Next week",
+    "example_sentence": "来週の月曜日にテストがあります。"
+  },
+  {
+    "id": 168,
+    "word": "先週",
+    "romaji": "senshuu",
+    "translation": "Last week",
+    "example_sentence": "先週の土曜日に新しい映画を見ました。"
+  },
+  {
+    "id": 169,
+    "word": "今月",
+    "romaji": "kongetsu",
+    "translation": "This month",
+    "example_sentence": "今月は出費が多くて困っています。"
+  },
+  {
+    "id": 170,
+    "word": "来月",
+    "romaji": "raigetsu",
+    "translation": "Next month",
+    "example_sentence": "来月から新しい生活が始まります。"
+  },
+  {
+    "id": 171,
+    "word": "先月",
+    "romaji": "sengetsu",
+    "translation": "Last month",
+    "example_sentence": "先月、日本旅行から帰ってきました。"
+  },
+  {
+    "id": 172,
+    "word": "今年",
+    "romaji": "kotoshi",
+    "translation": "This year",
+    "example_sentence": "今年はたくさんの新しいことに挑戦します。"
+  },
+  {
+    "id": 173,
+    "word": "来年",
+    "romaji": "rainen",
+    "translation": "Next year",
+    "example_sentence": "来年は大学を卒業する予定です。"
+  },
+  {
+    "id": 174,
+    "word": "去年",
+    "romaji": "kyonen",
+    "translation": "Last year",
+    "example_sentence": "去年の冬は本当に雪が多かったです。"
+  },
+  {
+    "id": 175,
+    "word": "朝",
+    "romaji": "asa",
+    "translation": "Morning",
+    "example_sentence": "朝早い電車はいつも満員です。"
+  },
+  {
+    "id": 176,
+    "word": "昼",
+    "romaji": "hiru",
+    "translation": "Noon / Afternoon",
+    "example_sentence": "お昼休みに近くの公園をお散歩した。"
+  },
+  {
+    "id": 177,
+    "word": "夜",
+    "romaji": "yoru",
+    "translation": "Night",
+    "example_sentence": "夜遅くまで起きていると体に悪いです。"
+  },
+  {
+    "id": 178,
+    "word": "夕方",
+    "romaji": "yuugata",
+    "translation": "Evening",
+    "example_sentence": "夕方になると綺麗な夕焼けが見える。"
+  },
+  {
+    "id": 179,
+    "word": "時間",
+    "romaji": "jikan",
+    "translation": "Time",
+    "example_sentence": "約束の時間に遅れないようにしてください。"
+  },
+  {
+    "id": 180,
+    "word": "時計",
+    "romaji": "tokei",
+    "translation": "Clock",
+    "example_sentence": "リビングの時計が五分進んでいます。"
+  },
+  {
+    "id": 181,
+    "word": "カレンダー",
+    "romaji": "karendaa",
+    "translation": "Calendar",
+    "example_sentence": "壁のカレンダーに予定を書き込みました。"
+  },
+  {
+    "id": 182,
+    "word": "春",
+    "romaji": "haru",
+    "translation": "Spring",
+    "example_sentence": "春には桜の花が一斉に咲き誇ります。"
+  },
+  {
+    "id": 183,
+    "word": "夏",
+    "romaji": "natsu",
+    "translation": "Summer",
+    "example_sentence": "日本の夏は花火大会がたくさんあります。"
+  },
+  {
+    "id": 184,
+    "word": "秋",
+    "romaji": "aki",
+    "translation": "Autumn",
+    "example_sentence": "秋になると木々の葉が赤く色づきます。"
+  },
+  {
+    "id": 185,
+    "word": "冬",
+    "romaji": "fuyu",
+    "translation": "Winter",
+    "example_sentence": "冬はコタツに入ってみかんを食べます。"
+  },
+  {
+    "id": 186,
+    "word": "天気",
+    "romaji": "tenki",
+    "translation": "Weather",
+    "example_sentence": "今日は天気が良いので洗濯をします。"
+  },
+  {
+    "id": 187,
+    "word": "晴れ",
+    "romaji": "hare",
+    "translation": "Sunny",
+    "example_sentence": "明日の予報は一日中晴れのようです。"
+  },
+  {
+    "id": 188,
+    "word": "雨",
+    "romaji": "ame",
+    "translation": "Rain",
+    "example_sentence": "雨がザーザーと激しく降っています。"
+  },
+  {
+    "id": 189,
+    "word": "曇り",
+    "romaji": "kumori",
+    "translation": "Cloudy",
+    "example_sentence": "今日は曇りで太陽が見えません。"
+  },
+  {
+    "id": 190,
+    "word": "雪",
+    "romaji": "yuki",
+    "translation": "Snow",
+    "example_sentence": "雪が積もって街が真っ白になりました。"
+  },
+  {
+    "id": 191,
+    "word": "風",
+    "romaji": "kaze",
+    "translation": "Wind",
+    "example_sentence": "強い風が吹いて帽子が飛ばされた。"
+  },
+  {
+    "id": 192,
+    "word": "台風",
+    "romaji": "taifu",
+    "translation": "Typhoon",
+    "example_sentence": "台風が近づいているので注意が必要です。"
+  },
+  {
+    "id": 193,
+    "word": "地震",
+    "romaji": "jishin",
+    "translation": "Earthquake",
+    "example_sentence": "日本は地震が非常に多い国です。"
+  },
+  {
+    "id": 194,
+    "word": "海",
+    "romaji": "umi",
+    "translation": "Sea / Ocean",
+    "example_sentence": "夏の海は青くて本当に綺麗ですね。"
+  },
+  {
+    "id": 195,
+    "word": "山",
+    "romaji": "yama",
+    "translation": "Mountain",
+    "example_sentence": "週末に友達と山登りに行きます。"
+  },
+  {
+    "id": 196,
+    "word": "川",
+    "romaji": "kawa",
+    "translation": "River",
+    "example_sentence": "川のせせらぎを聞くと癒されます。"
+  },
+  {
+    "id": 197,
+    "word": "湖",
+    "romaji": "mizuumi",
+    "translation": "Lake",
+    "example_sentence": "湖の周りを自転車で一周しました。"
+  },
+  {
+    "id": 198,
+    "word": "森",
+    "romaji": "mori",
+    "translation": "Forest",
+    "example_sentence": "深い森の中に小さなお家がありました。"
+  },
+  {
+    "id": 199,
+    "word": "空",
+    "romaji": "sora",
+    "translation": "Sky",
+    "example_sentence": "見上げると雲一つない青空だった。"
+  },
+  {
+    "id": 200,
+    "word": "太陽",
+    "romaji": "taiyou",
+    "translation": "Sun",
+    "example_sentence": "太陽の光を浴びて植物が育ちます。"
+  },
+  {
+    "id": 201,
+    "word": "月",
+    "romaji": "tsuki",
+    "translation": "Moon",
+    "example_sentence": "今夜は満月がとても美しいです。"
+  },
+  {
+    "id": 202,
+    "word": "星",
+    "romaji": "hoshi",
+    "translation": "Star",
+    "example_sentence": "夜空にたくさんの星が輝いています。"
+  },
+  {
+    "id": 203,
+    "word": "花",
+    "romaji": "hana",
+    "translation": "Flower",
+    "example_sentence": "花壇にカラフルな花を植えました。"
+  },
+  {
+    "id": 204,
+    "word": "木",
+    "romaji": "ki",
+    "translation": "Tree",
+    "example_sentence": "大きな木の下で雨宿りをしました。"
+  },
+  {
+    "id": 205,
+    "word": "草",
+    "romaji": "kusa",
+    "translation": "Grass",
+    "example_sentence": "庭の草むしりをするのは大変です。"
+  },
+  {
+    "id": 206,
+    "word": "日本",
+    "romaji": "nihon",
+    "translation": "Japan",
+    "example_sentence": "私は日本の文化に興味があります。"
+  },
+  {
+    "id": 207,
+    "word": "東京",
+    "romaji": "toukyou",
+    "translation": "Tokyo",
+    "example_sentence": "東京はとても人が多い大都市です。"
+  },
+  {
+    "id": 208,
+    "word": "京都",
+    "romaji": "kyouto",
+    "translation": "Kyoto",
+    "example_sentence": "京都には古い建造物がたくさんあります。"
+  },
+  {
+    "id": 209,
+    "word": "大阪",
+    "romaji": "oosaka",
+    "translation": "Osaka",
+    "example_sentence": "大阪のたこ焼きは本当に美味しい。"
+  },
+  {
+    "id": 210,
+    "word": "北海道",
+    "romaji": "hokkaidoo",
+    "translation": "Hokkaido",
+    "example_sentence": "北海道の冬はスキーに最適です。"
+  },
+  {
+    "id": 211,
+    "word": "沖縄",
+    "romaji": "okinawa",
+    "translation": "Okinawa",
+    "example_sentence": "沖縄の海はエメラルドグリーンです。"
+  },
+  {
+    "id": 212,
+    "word": "世界",
+    "romaji": "sekai",
+    "translation": "World",
+    "example_sentence": "将来は世界中を旅して回りたい。"
+  },
+  {
+    "id": 213,
+    "word": "国",
+    "romaji": "kuni",
+    "translation": "Country",
+    "example_sentence": "あなたの生まれた国はどこですか？"
+  },
+  {
+    "id": 214,
+    "word": "外国人",
+    "romaji": "gaikokujin",
+    "translation": "Foreigner",
+    "example_sentence": "最近、街で外国人観光客をよく見ます。"
+  },
+  {
+    "id": 215,
+    "word": "言語",
+    "romaji": "gengo",
+    "translation": "Language",
+    "example_sentence": "新しい言語を学ぶのは根気がいります。"
+  },
+  {
+    "id": 216,
+    "word": "日本語",
+    "romaji": "nihongo",
+    "translation": "Japanese language",
+    "example_sentence": "日本語の勉強を始めて一年になります。"
+  },
+  {
+    "id": 217,
+    "word": "英語",
+    "romaji": "eigo",
+    "translation": "English language",
+    "example_sentence": "英語でスムーズに話せるようになりたい。"
+  },
+  {
+    "id": 218,
+    "word": "漢字",
+    "romaji": "kanji",
+    "translation": "Kanji characters",
+    "example_sentence": "漢字の書き順を覚えるのは大変です。"
+  },
+  {
+    "id": 219,
+    "word": "ひらがな",
+    "romaji": "hiragana",
+    "translation": "Hiragana",
+    "example_sentence": "日本語学習はひらがなから始まります。"
+  },
+  {
+    "id": 220,
+    "word": "カタカナ",
+    "romaji": "katakana",
+    "translation": "Katakana",
+    "example_sentence": "外来語は基本的にカタカナで書きます。"
+  },
+  {
+    "id": 221,
+    "word": "数字",
+    "romaji": "suuji",
+    "translation": "Numbers",
+    "example_sentence": "パスワードには数字も含めてください。"
+  },
+  {
+    "id": 222,
+    "word": "名前",
+    "romaji": "namae",
+    "translation": "Name",
+    "example_sentence": "ここにあなたのお名前を書いてください。"
+  },
+  {
+    "id": 223,
+    "word": "名字",
+    "romaji": "myouji",
+    "translation": "Surname",
+    "example_sentence": "日本で一番多い名字は佐藤さんです。"
+  },
+  {
+    "id": 224,
+    "word": "住所",
+    "romaji": "juusho",
+    "translation": "Address",
+    "example_sentence": "引っ越したので住所が変わりました。"
+  },
+  {
+    "id": 225,
+    "word": "電話番号",
+    "romaji": "denwabangou",
+    "translation": "Phone number",
+    "example_sentence": "緊急連絡先の電話番号を教えてください。"
+  },
+  {
+    "id": 226,
+    "word": "メール",
+    "romaji": "meeru",
+    "translation": "Email",
+    "example_sentence": "詳細を後ほどメールで送ります。"
+  },
+  {
+    "id": 227,
+    "word": "手紙",
+    "romaji": "tegami",
+    "translation": "Letter",
+    "example_sentence": "久しぶりに手書きの手紙をもらった。"
+  },
+  {
+    "id": 228,
+    "word": "はがき",
+    "romaji": "hagaki",
+    "translation": "Postcard",
+    "example_sentence": "旅先から家族にはがきを出しました。"
+  },
+  {
+    "id": 229,
+    "word": "切手",
+    "romaji": "kitte",
+    "translation": "Stamp",
+    "example_sentence": "この封筒に切手を貼ってください。"
+  },
+  {
+    "id": 230,
+    "word": "ポスト",
+    "romaji": "posuto",
+    "translation": "Mailbox",
+    "example_sentence": "郵便物を赤いポストに投函しました。"
+  },
+  {
+    "id": 231,
+    "word": "郵便局",
+    "romaji": "yuubinkyoku",
+    "translation": "Post office",
+    "example_sentence": "荷物を送るために郵便局へ行きます。"
+  },
+  {
+    "id": 232,
+    "word": "家",
+    "romaji": "ie",
+    "translation": "House / Home",
+    "example_sentence": "私の家は駅から歩いて五分です。"
+  },
+  {
+    "id": 233,
+    "word": "アパート",
+    "romaji": "apaato",
+    "translation": "Apartment",
+    "example_sentence": "大学の近くのアパートに住んでいます。"
+  },
+  {
+    "id": 234,
+    "word": "マンション",
+    "romaji": "manshon",
+    "translation": "Condominium",
+    "example_sentence": "高層マンションの最上階に住みたい。"
+  },
+  {
+    "id": 235,
+    "word": "部屋",
+    "romaji": "heya",
+    "translation": "Room",
+    "example_sentence": "週末に部屋の掃除を一気にやります。"
+  },
+  {
+    "id": 236,
+    "word": "台所",
+    "romaji": "daidokoro",
+    "translation": "Kitchen",
+    "example_sentence": "台所から美味しそうな匂いがする。"
+  },
+  {
+    "id": 237,
+    "word": "お風呂",
+    "romaji": "ofuro",
+    "translation": "Bath",
+    "example_sentence": "お風呂に入って一日の疲れを取ります。"
+  },
+  {
+    "id": 238,
+    "word": "トイレ",
+    "romaji": "toire",
+    "translation": "Toilet / Restroom",
+    "example_sentence": "すみません、トイレはどこですか？"
+  },
+  {
+    "id": 239,
+    "word": "玄関",
+    "romaji": "genkan",
+    "translation": "Entrance",
+    "example_sentence": "玄関で靴を脱いで上がってください。"
+  },
+  {
+    "id": 240,
+    "word": "庭",
+    "romaji": "niwa",
+    "translation": "Garden / Yard",
+    "example_sentence": "うちの庭には大きな桜の木があります。"
+  },
+  {
+    "id": 241,
+    "word": "窓",
+    "romaji": "mado",
+    "translation": "Window",
+    "example_sentence": "窓ガラスを綺麗に拭きました。"
+  },
+  {
+    "id": 242,
+    "word": "ドア",
+    "romaji": "doa",
+    "translation": "Door",
+    "example_sentence": "ドアを閉めるときは静かにね。"
+  },
+  {
+    "id": 243,
+    "word": "鍵",
+    "romaji": "kagi",
+    "translation": "Key",
+    "example_sentence": "出かける前に鍵を閉め忘れました。"
+  },
+  {
+    "id": 244,
+    "word": "机",
+    "romaji": "tsukue",
+    "translation": "Desk",
+    "example_sentence": "机の上を整理整頓してください。"
+  },
+  {
+    "id": 245,
+    "word": "椅子",
+    "romaji": "isu",
+    "translation": "Chair",
+    "example_sentence": "この椅子は座り心地がとても良い。"
+  },
+  {
+    "id": 246,
+    "word": "ベッド",
+    "romaji": "beddo",
+    "translation": "Bed",
+    "example_sentence": "ふかふかのベッドで熟睡しました。"
+  },
+  {
+    "id": 247,
+    "word": "布団",
+    "romaji": "futon",
+    "translation": "Futon",
+    "example_sentence": "日本の旅館では布団を敷いて寝ます。"
+  },
+  {
+    "id": 248,
+    "word": "本棚",
+    "romaji": "hondana",
+    "translation": "Bookshelf",
+    "example_sentence": "本棚が漫画でいっぱいになりました。"
+  },
+  {
+    "id": 249,
+    "word": "冷蔵庫",
+    "romaji": "reizouko",
+    "translation": "Refrigerator",
+    "example_sentence": "冷蔵庫に牛乳が入っています。"
+  },
+  {
+    "id": 250,
+    "word": "洗濯機",
+    "romaji": "sentakki",
+    "translation": "Washing machine",
+    "example_sentence": "洗濯機が壊れたのでコインランドリーへ行く。"
+  },
+  {
+    "id": 251,
+    "word": "掃除機",
+    "romaji": "soujiki",
+    "translation": "Vacuum cleaner",
+    "example_sentence": "掃除機をかけて床を綺麗にします。"
+  },
+  {
+    "id": 252,
+    "word": "テレビ",
+    "romaji": "terebi",
+    "translation": "Television",
+    "example_sentence": "テレビでニュースを見ています。"
+  },
+  {
+    "id": 253,
+    "word": "パソコン",
+    "romaji": "pasokon",
+    "translation": "PC / Computer",
+    "example_sentence": "パソコンでレポートを作成します。"
+  },
+  {
+    "id": 254,
+    "word": "スマートフォン",
+    "romaji": "sumaatofon",
+    "translation": "Smartphone",
+    "example_sentence": "スマートフォンは現代の必需品です。"
+  },
+  {
+    "id": 255,
+    "word": "時計",
+    "romaji": "tokei",
+    "translation": "Clock / Watch",
+    "example_sentence": "目覚まし時計の音で起きました。"
+  },
+  {
+    "id": 256,
+    "word": "服",
+    "romaji": "fuku",
+    "translation": "Clothes",
+    "example_sentence": "今日着る服を迷っています。"
+  },
+  {
+    "id": 257,
+    "word": "シャツ",
+    "romaji": "shatsu",
+    "translation": "Shirt",
+    "example_sentence": "白いシャツにアイロンをかけます。"
+  },
+  {
+    "id": 258,
+    "word": "ズボン",
+    "romaji": "zubon",
+    "translation": "Trousers / Pants",
+    "example_sentence": "このズボンは少しサイズが大きいです。"
+  },
+  {
+    "id": 259,
+    "word": "スカート",
+    "romaji": "sukaato",
+    "translation": "Skirt",
+    "example_sentence": "春らしい色のスカートを買いました。"
+  },
+  {
+    "id": 260,
+    "word": "靴下",
+    "romaji": "kutsushita",
+    "translation": "Socks",
+    "example_sentence": "靴下に小さな穴が空いていました。"
+  },
+  {
+    "id": 261,
+    "word": "靴",
+    "romaji": "kutsu",
+    "translation": "Shoes",
+    "example_sentence": "出かける前に靴を磨きます。"
+  },
+  {
+    "id": 262,
+    "word": "鞄",
+    "romaji": "kaban",
+    "translation": "Bag",
+    "example_sentence": "通勤用の新しい鞄を探しています。"
+  },
+  {
+    "id": 263,
+    "word": "帽子",
+    "romaji": "boushi",
+    "translation": "Hat",
+    "example_sentence": "風で帽子が飛ばされそうになった。"
+  },
+  {
+    "id": 264,
+    "word": "眼鏡",
+    "romaji": "megane",
+    "translation": "Glasses",
+    "example_sentence": "眼鏡を外すとよく見えません。"
+  },
+  {
+    "id": 265,
+    "word": "財布",
+    "romaji": "saifu",
+    "translation": "Wallet",
+    "example_sentence": "財布を落として焦りました。"
+  },
+  {
+    "id": 266,
+    "word": "お金",
+    "romaji": "okane",
+    "translation": "Money",
+    "example_sentence": "お金の使いすぎには注意しましょう。"
+  },
+  {
+    "id": 267,
+    "word": "現金",
+    "romaji": "genkin",
+    "translation": "Cash",
+    "example_sentence": "この店は現金のみ使えます。"
+  },
+  {
+    "id": 268,
+    "word": "クレジットカード",
+    "romaji": "kurejittokaado",
+    "translation": "Credit card",
+    "example_sentence": "支払いはクレジットカードでします。"
+  },
+  {
+    "id": 269,
+    "word": "切符",
+    "romaji": "kippu",
+    "translation": "Ticket",
+    "example_sentence": "駅の改札で切符を通します。"
+  },
+  {
+    "id": 270,
+    "word": "定期券",
+    "romaji": "teikiken",
+    "translation": "Commuter pass",
+    "example_sentence": "通学用の定期券を更新しました。"
+  },
+  {
+    "id": 271,
+    "word": "飛行機",
+    "romaji": "hikouki",
+    "translation": "Airplane",
+    "example_sentence": "飛行機に乗るのが少し怖いです。"
+  },
+  {
+    "id": 272,
+    "word": "電車",
+    "romaji": "densha",
+    "translation": "Train",
+    "example_sentence": "日本の電車は時間が正確です。"
+  },
+  {
+    "id": 273,
+    "word": "地下鉄",
+    "romaji": "chikatetsu",
+    "translation": "Subway / Underground",
+    "example_sentence": "東京の地下鉄は路線が複雑です。"
+  },
+  {
+    "id": 274,
+    "word": "新幹線",
+    "romaji": "shinkansen",
+    "translation": "Bullet train",
+    "example_sentence": "新幹線で東京から大阪へ行きます。"
+  },
+  {
+    "id": 275,
+    "word": "バス",
+    "romaji": "basu",
+    "translation": "Bus",
+    "example_sentence": "雨の日はバスが遅れやすいです。"
+  },
+  {
+    "id": 276,
+    "word": "タクシー",
+    "romaji": "takushii",
+    "translation": "Taxi",
+    "example_sentence": "終電を逃したのでタクシーに乗った。"
+  },
+  {
+    "id": 277,
+    "word": "自転車",
+    "romaji": "jitensha",
+    "translation": "Bicycle",
+    "example_sentence": "天気がいいので自転車で出かけます。"
+  },
+  {
+    "id": 278,
+    "word": "車",
+    "romaji": "kuruma",
+    "translation": "Car",
+    "example_sentence": "将来、かっこいい車を買いたいです。"
+  },
+  {
+    "id": 279,
+    "word": "バイク",
+    "romaji": "baiku",
+    "translation": "Motorcycle",
+    "example_sentence": "バイクでツーリングに行くのが趣味です。"
+  },
+  {
+    "id": 280,
+    "word": "船",
+    "romaji": "fune",
+    "translation": "Ship / Boat",
+    "example_sentence": "大きな船で世界一周の旅に出る。"
+  },
+  {
+    "id": 281,
+    "word": "駅",
+    "romaji": "eki",
+    "translation": "Station",
+    "example_sentence": "駅の改札口で待ち合わせをします。"
+  },
+  {
+    "id": 282,
+    "word": "空港",
+    "romaji": "kuukou",
+    "translation": "Airport",
+    "example_sentence": "空港は見ているだけでワクワクします。"
+  },
+  {
+    "id": 283,
+    "word": "港",
+    "romaji": "minato",
+    "translation": "Port / Harbor",
+    "example_sentence": "港にたくさんの船が泊まっています。"
+  },
+  {
+    "id": 284,
+    "word": "道",
+    "romaji": "michi",
+    "translation": "Road / Way",
+    "example_sentence": "道に迷ってしまったようです。"
+  },
+  {
+    "id": 285,
+    "word": "交差点",
+    "romaji": "kousaten",
+    "translation": "Intersection",
+    "example_sentence": "大きな交差点を右に曲がります。"
+  },
+  {
+    "id": 286,
+    "word": "信号",
+    "romaji": "shingou",
+    "translation": "Traffic light",
+    "example_sentence": "信号が赤のときは止まってください。"
+  },
+  {
+    "id": 287,
+    "word": "角",
+    "romaji": "kado",
+    "translation": "Corner",
+    "example_sentence": "次の角を左に曲がると目的地です。"
+  },
+  {
+    "id": 288,
+    "word": "橋",
+    "romaji": "hashi",
+    "translation": "Bridge",
+    "example_sentence": "この古い橋を渡ると村に着きます。"
+  },
+  {
+    "id": 289,
+    "word": "公園",
+    "romaji": "kouen",
+    "translation": "Park",
+    "example_sentence": "子供たちが公園で元気に走っている。"
+  },
+  {
+    "id": 290,
+    "word": "学校",
+    "romaji": "gakkou",
+    "translation": "School",
+    "example_sentence": "毎朝八時に学校へ行きます。"
+  },
+  {
+    "id": 291,
+    "word": "大学",
+    "romaji": "daigaku",
+    "translation": "University",
+    "example_sentence": "大学で経済学を専攻しています。"
+  },
+  {
+    "id": 292,
+    "word": "図書館",
+    "romaji": "toshokan",
+    "translation": "Library",
+    "example_sentence": "図書館は静かで勉強に最適です。"
+  },
+  {
+    "id": 293,
+    "word": "本屋",
+    "romaji": "honya",
+    "translation": "Bookstore",
+    "example_sentence": "本屋で新しい雑誌を買いました。"
+  },
+  {
+    "id": 294,
+    "word": "病院",
+    "romaji": "byouin",
+    "translation": "Hospital",
+    "example_sentence": "お見舞いのために病院へ行きます。"
+  },
+  {
+    "id": 295,
+    "word": "銀行",
+    "romaji": "ginkou",
+    "translation": "Bank",
+    "example_sentence": "銀行の窓口は三時に閉まります。"
+  },
+  {
+    "id": 296,
+    "word": "映画館",
+    "romaji": "eigakan",
+    "translation": "Movie theater",
+    "example_sentence": "大きな映画館で大迫力の映画を見た。"
+  },
+  {
+    "id": 297,
+    "word": "美術館",
+    "romaji": "bijutsukan",
+    "translation": "Art museum",
+    "example_sentence": "美術館で有名な絵画を鑑賞した。"
+  },
+  {
+    "id": 298,
+    "word": "博物館",
+    "romaji": "hakubutsukan",
+    "translation": "Museum",
+    "example_sentence": "博物館で恐竜の化石を見ました。"
+  },
+  {
+    "id": 299,
+    "word": "動物園",
+    "romaji": "doubutsuen",
+    "translation": "Zoo",
+    "example_sentence": "動物園でパンダを見ました。"
+  },
+  {
+    "id": 300,
+    "word": "植物園",
+    "romaji": "shokubutsuen",
+    "translation": "Botanical garden",
+    "example_sentence": "植物園には珍しい花がたくさんある。"
+  },
+  {
+    "id": 301,
+    "word": "遊園地",
+    "romaji": "yuuenchi",
+    "translation": "Amusement park",
+    "example_sentence": "遊園地のジェットコースターに乗った。"
+  },
+  {
+    "id": 302,
+    "word": "お寺",
+    "romaji": "otera",
+    "translation": "Temple",
+    "example_sentence": "京都のお寺で座禅を体験しました。"
+  },
+  {
+    "id": 303,
+    "word": "神社",
+    "romaji": "jinja",
+    "translation": "Shrine",
+    "example_sentence": "初詣に近くの神社へ行きました。"
+  },
+  {
+    "id": 304,
+    "word": "教会",
+    "romaji": "kyoukai",
+    "translation": "Church",
+    "example_sentence": "日曜日には教会へお祈りに行きます。"
+  },
+  {
+    "id": 305,
+    "word": "ホテル",
+    "romaji": "hoteru",
+    "translation": "Hotel",
+    "example_sentence": "観光に便利なホテルを予約しました。"
+  },
+  {
+    "id": 306,
+    "word": "旅館",
+    "romaji": "ryokan",
+    "translation": "Japanese inn",
+    "example_sentence": "温泉街の古い旅館に泊まりました。"
+  },
+  {
+    "id": 307,
+    "word": "店",
+    "romaji": "mise",
+    "translation": "Shop / Store",
+    "example_sentence": "あのお店はお洒落な小物が置いてある。"
+  },
+  {
+    "id": 308,
+    "word": "スーパー",
+    "romaji": "suupaa",
+    "translation": "Supermarket",
+    "example_sentence": "スーパーで今夜のおかずを買う。"
+  },
+  {
+    "id": 309,
+    "word": "コンビニ",
+    "romaji": "konbini",
+    "translation": "Convenience store",
+    "example_sentence": "日本のコンビニは本当に何でも揃う。"
+  },
+  {
+    "id": 310,
+    "word": "デパート",
+    "romaji": "depaato",
+    "translation": "Department store",
+    "example_sentence": "デパートの化粧品売り場は華やかだ。"
+  },
+  {
+    "id": 311,
+    "word": "レストラン",
+    "romaji": "resutoran",
+    "translation": "Restaurant",
+    "example_sentence": "記念日に高級なレストランを予約した。"
+  },
+  {
+    "id": 312,
+    "word": "喫茶店",
+    "romaji": "kissaten",
+    "translation": "Coffee shop",
+    "example_sentence": "レトロな喫茶店で読書をします。"
+  },
+  {
+    "id": 313,
+    "word": "居酒屋",
+    "romaji": "izakaya",
+    "translation": "Japanese pub",
+    "example_sentence": "金曜日の夜は居酒屋がサラリーマンで賑わう。"
+  },
+  {
+    "id": 314,
+    "word": "会社",
+    "romaji": "kaisha",
+    "translation": "Company",
+    "example_sentence": "私の会社はIT関連の業務をしています。"
+  },
+  {
+    "id": 315,
+    "word": "工場",
+    "romaji": "koujou",
+    "translation": "Factory",
+    "example_sentence": "自動車を作る工場を見学しました。"
+  },
+  {
+    "id": 316,
+    "word": "事務所",
+    "romaji": "jimusho",
+    "translation": "Office",
+    "example_sentence": "新しい事務所へ引っ越しました。"
+  },
+  {
+    "id": 317,
+    "word": "受付",
+    "romaji": "uketsuke",
+    "translation": "Reception",
+    "example_sentence": "会社の受付で名前を記入してください。"
+  },
+  {
+    "id": 318,
+    "word": "会議室",
+    "romaji": "kaigishitsu",
+    "translation": "Meeting room",
+    "example_sentence": "会議室で重要なプレゼンを行います。"
+  },
+  {
+    "id": 319,
+    "word": "社長",
+    "romaji": "shachou",
+    "translation": "President (of a company)",
+    "example_sentence": "我が社の社長はとても気さくな方です。"
+  },
+  {
+    "id": 320,
+    "word": "部長",
+    "romaji": "buchou",
+    "translation": "Department manager",
+    "example_sentence": "部長に書類の確認をお願いしました。"
+  },
+  {
+    "id": 321,
+    "word": "課長",
+    "romaji": "kachou",
+    "translation": "Section manager",
+    "example_sentence": "課長から新しい指示を受けました。"
+  },
+  {
+    "id": 322,
+    "word": "同僚",
+    "romaji": "douryou",
+    "translation": "Colleague",
+    "example_sentence": "仕事の後に同僚と飲みに行きます。"
+  },
+  {
+    "id": 323,
+    "word": "上司",
+    "romaji": "joushi",
+    "translation": "Boss / Superior",
+    "example_sentence": "上司からのアドバイスはいつも的確です。"
+  },
+  {
+    "id": 324,
+    "word": "部下",
+    "romaji": "buka",
+    "translation": "Subordinate",
+    "example_sentence": "部下の育成について悩んでいます。"
+  },
+  {
+    "id": 325,
+    "word": "お客さん",
+    "romaji": "okakusan",
+    "translation": "Customer / Guest",
+    "example_sentence": "お店にお客さんがたくさん並んでいます。"
+  },
+  {
+    "id": 326,
+    "word": "友達",
+    "romaji": "tomodachi",
+    "translation": "Friend",
+    "example_sentence": "友達と遊ぶのが一番楽しい時間です。"
+  },
+  {
+    "id": 327,
+    "word": "親友",
+    "romaji": "shinyuu",
+    "translation": "Best friend",
+    "example_sentence": "彼とは何でも話せる親友の仲です。"
+  },
+  {
+    "id": 328,
+    "word": "仲間",
+    "romaji": "nakama",
+    "translation": "Comrade / Peer",
+    "example_sentence": "サッカーの仲間と優勝を祝いました。"
+  },
+  {
+    "id": 329,
+    "word": "恋人",
+    "romaji": "koibito",
+    "translation": "Lover / Partner",
+    "example_sentence": "週末に恋人とデートに行きます。"
+  },
+  {
+    "id": 330,
+    "word": "彼氏",
+    "romaji": "kareshi",
+    "translation": "Boyfriend",
+    "example_sentence": "彼女の彼氏はとても背が高いです。"
+  },
+  {
+    "id": 331,
+    "word": "彼女",
+    "romaji": "kanojo",
+    "translation": "Girlfriend / She",
+    "example_sentence": "私の彼女は料理がとても得意です。"
+  },
+  {
+    "id": 332,
+    "word": "結婚",
+    "romaji": "kekkon",
+    "translation": "Marriage",
+    "example_sentence": "来年、結婚することになりました。"
+  },
+  {
+    "id": 333,
+    "word": "独身",
+    "romaji": "dokushin",
+    "translation": "Single / Unmarried",
+    "example_sentence": "彼はまだ独身で自由を満喫している。"
+  },
+  {
+    "id": 334,
+    "word": "家族",
+    "romaji": "kazoku",
+    "translation": "Family",
+    "example_sentence": "お正月に家族全員が集まりました。"
+  },
+  {
+    "id": 335,
+    "word": "両親",
+    "romaji": "ryoushin",
+    "translation": "Parents",
+    "example_sentence": "両親に感謝の気持ちを伝えました。"
+  },
+  {
+    "id": 336,
+    "word": "父親",
+    "romaji": "chichioya",
+    "translation": "Father",
+    "example_sentence": "私の父親は厳格ですが優しいです。"
+  },
+  {
+    "id": 337,
+    "word": "母親",
+    "romaji": "hahaoya",
+    "translation": "Mother",
+    "example_sentence": "母親の作るオムライスが大好きです。"
+  },
+  {
+    "id": 338,
+    "word": "兄弟",
+    "romaji": "kyoudai",
+    "translation": "Brothers / Siblings",
+    "example_sentence": "私は三人兄弟の一番上です。"
+  },
+  {
+    "id": 339,
+    "word": "姉妹",
+    "romaji": "shimai",
+    "translation": "Sisters",
+    "example_sentence": "あの二人はとても仲が良い姉妹です。"
+  },
+  {
+    "id": 340,
+    "word": "兄",
+    "romaji": "ani",
+    "translation": "Older brother (own)",
+    "example_sentence": "私の兄は東京で一人暮らしをしています。"
+  },
+  {
+    "id": 341,
+    "word": "お兄さん",
+    "romaji": "oniisan",
+    "translation": "Older brother (someone else's)",
+    "example_sentence": "佐藤さんのお兄さんはお医者さんです。"
+  },
+  {
+    "id": 342,
+    "word": "姉",
+    "romaji": "ane",
+    "translation": "Older sister (own)",
+    "example_sentence": "私の姉はピアノの先生です。"
+  },
+  {
+    "id": 343,
+    "word": "お姉さん",
+    "romaji": "oneesan",
+    "translation": "Older sister (someone else's)",
+    "example_sentence": "あそこにいる綺麗なお姉さんは誰ですか？"
+  },
+  {
+    "id": 344,
+    "word": "弟",
+    "romaji": "otouto",
+    "translation": "Younger brother (own)",
+    "example_sentence": "私の弟は高校で野球をやっています。"
+  },
+  {
+    "id": 345,
+    "word": "弟さん",
+    "romaji": "otoutosan",
+    "translation": "Younger brother (someone else's)",
+    "example_sentence": "鈴木さんの弟さんは元気ですか？"
+  },
+  {
+    "id": 346,
+    "word": "妹",
+    "romaji": "imouto",
+    "translation": "Younger sister (own)",
+    "example_sentence": "私の妹はアニメが大好きです。"
+  },
+  {
+    "id": 347,
+    "word": "妹さん",
+    "romaji": "imoutosan",
+    "translation": "Younger sister (someone else's)",
+    "example_sentence": "木村さんの妹さんは絵が上手ですね。"
+  },
+  {
+    "id": 348,
+    "word": "祖父",
+    "romaji": "sofu",
+    "translation": "Grandfather (own)",
+    "example_sentence": "私の祖父は昔、学校の先生でした。"
+  },
+  {
+    "id": 349,
+    "word": "おじいちゃん",
+    "romaji": "ojiichan",
+    "translation": "Grandfather / Old man",
+    "example_sentence": "おじいちゃん、いつもお小遣いありがとう。"
+  },
+  {
+    "id": 350,
+    "word": "祖母",
+    "romaji": "sobo",
+    "translation": "Grandmother (own)",
+    "example_sentence": "私の祖母は着物がとても似合います。"
+  },
+  {
+    "id": 351,
+    "word": "おばあちゃん",
+    "romaji": "obaachan",
+    "translation": "Grandmother / Old woman",
+    "example_sentence": "おばあちゃんの話す昔話は面白い。"
+  },
+  {
+    "id": 352,
+    "word": "子供",
+    "romaji": "kodomo",
+    "translation": "Child",
+    "example_sentence": "子供たちが元気に遊んでいます。"
+  },
+  {
+    "id": 353,
+    "word": "大人",
+    "romaji": "otona",
+    "translation": "Adult",
+    "example_sentence": "大人料金は高校生以上からです。"
+  },
+  {
+    "id": 354,
+    "word": "赤ちゃん",
+    "romaji": "akachan",
+    "translation": "Baby",
+    "example_sentence": "赤ちゃんがスヤスヤと眠っている。"
+  },
+  {
+    "id": 355,
+    "word": "老人",
+    "romaji": "roujin",
+    "translation": "Elderly person",
+    "example_sentence": "電車で老人に席を譲りました。"
+  },
+  {
+    "id": 356,
+    "word": "男性",
+    "romaji": "dansei",
+    "translation": "Male / Man",
+    "example_sentence": "この洋服は男性用ですか？"
+  },
+  {
+    "id": 357,
+    "word": "女性",
+    "romaji": "josei",
+    "translation": "Female / Woman",
+    "example_sentence": "そのセミナーには多くの女性が参加した。"
+  },
+  {
+    "id": 358,
+    "word": "男の子",
+    "romaji": "otokonoko",
+    "translation": "Boy",
+    "example_sentence": "小さな男の子が泣いています。"
+  },
+  {
+    "id": 359,
+    "word": "女の子",
+    "romaji": "onnanoko",
+    "translation": "Girl",
+    "example_sentence": "女の子が可愛い人形を持っています。"
+  },
+  {
+    "id": 360,
+    "word": "人間",
+    "romaji": "ningen",
+    "translation": "Human being",
+    "example_sentence": "人間誰しも間違いはあります。"
+  },
+  {
+    "id": 361,
+    "word": "人生",
+    "romaji": "jinsei",
+    "translation": "Life (span)",
+    "example_sentence": "一度きりの人生を楽しみましょう。"
+  },
+  {
+    "id": 362,
+    "word": "趣味",
+    "romaji": "shumi",
+    "translation": "Hobby",
+    "example_sentence": "私の趣味は写真を撮ることです。"
+  },
+  {
+    "id": 363,
+    "word": "旅行",
+    "romaji": "ryokou",
+    "translation": "Travel",
+    "example_sentence": "長期休みに海外旅行へ行きます。"
+  },
+  {
+    "id": 364,
+    "word": "音楽",
+    "romaji": "ongaku",
+    "translation": "Music",
+    "example_sentence": "音楽を聞きながら勉強します。"
+  },
+  {
+    "id": 365,
+    "word": "読書",
+    "romaji": "dokusho",
+    "translation": "Reading books",
+    "example_sentence": "秋は読書に最適な季節です。"
+  },
+  {
+    "id": 366,
+    "word": "映画",
+    "romaji": "eiga",
+    "translation": "Movie",
+    "example_sentence": "おすすめの映画はありますか？"
+  },
+  {
+    "id": 367,
+    "word": "写真",
+    "romaji": "shashin",
+    "translation": "Photograph",
+    "example_sentence": "ここで一緒に写真を撮りましょう。"
+  },
+  {
+    "id": 368,
+    "word": "スポーツ",
+    "romaji": "supootsu",
+    "translation": "Sports",
+    "example_sentence": "週末に色々なスポーツを楽しみます。"
+  },
+  {
+    "id": 369,
+    "word": "サッカー",
+    "romaji": "sakkaa",
+    "translation": "Soccer / Football",
+    "example_sentence": "サッカーの試合をテレビで観戦した。"
+  },
+  {
+    "id": 370,
+    "word": "野球",
+    "romaji": "yakyuu",
+    "translation": "Baseball",
+    "example_sentence": "日本では野球がとても人気です。"
+  },
+  {
+    "id": 371,
+    "word": "テニス",
+    "romaji": "tenisu",
+    "translation": "Tennis",
+    "example_sentence": "テニスコートを予約しました。"
+  },
+  {
+    "id": 372,
+    "word": "水泳",
+    "romaji": "suiei",
+    "translation": "Swimming",
+    "example_sentence": "水泳は全身運動によいです。"
+  },
+  {
+    "id": 373,
+    "word": "料理",
+    "romaji": "ryouri",
+    "translation": "Cooking",
+    "example_sentence": "たまには自分で料理をします。"
+  },
+  {
+    "id": 374,
+    "word": "買い物",
+    "romaji": "kaimono",
+    "translation": "Shopping",
+    "example_sentence": "渋谷へ買い物に出かけました。"
+  },
+  {
+    "id": 375,
+    "word": "散歩",
+    "romaji": "sanpo",
+    "translation": "Walk / Stroll",
+    "example_sentence": "犬の散歩へ行ってきます。"
+  },
+  {
+    "id": 376,
+    "word": "勉強",
+    "romaji": "benkyou",
+    "translation": "Study",
+    "example_sentence": "試験のために毎日三時間勉強する。"
+  },
+  {
+    "id": 377,
+    "word": "仕事",
+    "romaji": "shigoto",
+    "translation": "Work",
+    "example_sentence": "仕事が山積みで大変です。"
+  },
+  {
+    "id": 378,
+    "word": "宿題",
+    "romaji": "shukudai",
+    "translation": "Homework",
+    "example_sentence": "宿題を忘れて先生に怒られた。"
+  },
+  {
+    "id": 379,
+    "word": "授業",
+    "romaji": "jugyou",
+    "translation": "Class / Lesson",
+    "example_sentence": "今日の授業はこれで終わりです。"
+  },
+  {
+    "id": 380,
+    "word": "試験",
+    "romaji": "shiken",
+    "translation": "Exam / Test",
+    "example_sentence": "試験の結果が心配です。"
+  },
+  {
+    "id": 381,
+    "word": "点数",
+    "romaji": "tensuu",
+    "translation": "Score / Grade",
+    "example_sentence": "テストで満点の点数を取った。"
+  },
+  {
+    "id": 382,
+    "word": "合格",
+    "romaji": "goukaku",
+    "translation": "Passing an exam",
+    "example_sentence": "大学に合格して安心しました。"
+  },
+  {
+    "id": 383,
+    "word": "不合格",
+    "romaji": "fugoukaku",
+    "translation": "Failure (in an exam)",
+    "example_sentence": "不合格だったので、来年また頑張ります。"
+  },
+  {
+    "id": 384,
+    "word": "卒業",
+    "romaji": "sotsugyou",
+    "translation": "Graduation",
+    "example_sentence": "三月に高校を卒業しました。"
+  },
+  {
+    "id": 385,
+    "word": "入学",
+    "romaji": "nyuugaku",
+    "translation": "Admission / Entrance",
+    "example_sentence": "四月に入学式が行われます。"
+  },
+  {
+    "id": 386,
+    "word": "文化",
+    "romaji": "bunka",
+    "translation": "Culture",
+    "example_sentence": "他国の文化を理解することは大切です。"
+  },
+  {
+    "id": 387,
+    "word": "歴史",
+    "romaji": "rekishi",
+    "translation": "History",
+    "example_sentence": "日本の歴史についての本を読む。"
+  },
+  {
+    "id": 388,
+    "word": "伝統",
+    "romaji": "dentou",
+    "translation": "Tradition",
+    "example_sentence": "伝統的な祭りが今も残っています。"
+  },
+  {
+    "id": 389,
+    "word": "芸術",
+    "romaji": "geijutsu",
+    "translation": "Art",
+    "example_sentence": "彼は芸術の才能にあふれている。"
+  },
+  {
+    "id": 390,
+    "word": "文学",
+    "romaji": "bungaku",
+    "translation": "Literature",
+    "example_sentence": "大学で日本文学を研究しています。"
+  },
+  {
+    "id": 391,
+    "word": "小説",
+    "romaji": "shousetsu",
+    "translation": "Novel",
+    "example_sentence": "話題のミステリー小説を読みました。"
+  },
+  {
+    "id": 392,
+    "word": "詩",
+    "romaji": "shi",
+    "translation": "Poem",
+    "example_sentence": "心に響く美しい詩ですね。"
+  },
+  {
+    "id": 393,
+    "word": "漫画",
+    "romaji": "manga",
+    "translation": "Manga / Comic",
+    "example_sentence": "日本の漫画は世界中で人気です。"
+  },
+  {
+    "id": 394,
+    "word": "アニメ",
+    "romaji": "anime",
+    "translation": "Anime / Animation",
+    "example_sentence": "毎週新しいアニメをチェックします。"
+  },
+  {
+    "id": 395,
+    "word": "ゲーム",
+    "romaji": "geemu",
+    "translation": "Game",
+    "example_sentence": "休日は一日中オンラインゲームをする。"
+  },
+  {
+    "id": 396,
+    "word": "テレビ番組",
+    "romaji": "terebibangumi",
+    "translation": "TV program",
+    "example_sentence": "お気に入りのテレビ番組を見逃した。"
+  },
+  {
+    "id": 397,
+    "word": "ニュース",
+    "romaji": "nyuusu",
+    "translation": "News",
+    "example_sentence": "朝のニュースで天気予報を見ました。"
+  },
+  {
+    "id": 398,
+    "word": "インターネット",
+    "romaji": "intaanetto",
+    "translation": "Internet",
+    "example_sentence": "インターネットで情報を検索します。"
+  },
+  {
+    "id": 399,
+    "word": "ウェブサイト",
+    "romaji": "webusaito",
+    "translation": "Website",
+    "example_sentence": "公式ウェブサイトをご確認ください。"
+  },
+  {
+    "id": 400,
+    "word": "ブログ",
+    "romaji": "burogu",
+    "translation": "Blog",
+    "example_sentence": "旅行の思い出をブログに書きました。"
+  },
+  {
+    "id": 401,
+    "word": "お祝い",
+    "romaji": "oiwai",
+    "translation": "Celebration / Gift",
+    "example_sentence": "友達の出産のお祝いを買いました。"
+  },
+  {
+    "id": 402,
+    "word": "誕生日",
+    "romaji": "tanjoubi",
+    "translation": "Birthday",
+    "example_sentence": "誕生日にケーキを食べました。"
+  },
+  {
+    "id": 403,
+    "word": "クリスマス",
+    "romaji": "kurisumasu",
+    "translation": "Christmas",
+    "example_sentence": "クリスマスにツリーを飾りました。"
+  },
+  {
+    "id": 404,
+    "word": "正月",
+    "romaji": "shougatsu",
+    "translation": "New Year",
+    "example_sentence": "お正月におせち料理を食べます。"
+  },
+  {
+    "id": 405,
+    "word": "祭り",
+    "romaji": "matsuri",
+    "translation": "Festival",
+    "example_sentence": "夏の祭りで屋台が出店している。"
+  },
+  {
+    "id": 406,
+    "word": "花火",
+    "romaji": "hanabi",
+    "translation": "Fireworks",
+    "example_sentence": "夜空に大きな花火が打ち上がりました。"
+  },
+  {
+    "id": 407,
+    "word": "お花見",
+    "romaji": "ohanami",
+    "translation": "Cherry blossom viewing",
+    "example_sentence": "桜の木の下でお花見をします。"
+  },
+  {
+    "id": 408,
+    "word": "紅葉",
+    "romaji": "kouyou",
+    "translation": "Autumn leaves",
+    "example_sentence": "山が紅葉で赤や黄色に染まる。"
+  },
+  {
+    "id": 409,
+    "word": "温泉",
+    "romaji": "onsen",
+    "translation": "Hot spring",
+    "example_sentence": "温泉に入ってリフレッシュしたい。"
+  },
+  {
+    "id": 410,
+    "word": "お土産",
+    "romaji": "omiyage",
+    "translation": "Souvenir",
+    "example_sentence": "京都のお土産に八つ橋を買った。"
+  },
+  {
+    "id": 411,
+    "word": "切符",
+    "romaji": "kippu",
+    "translation": "Ticket",
+    "example_sentence": "新幹線の切符を事前に手配した。"
+  },
+  {
+    "id": 412,
+    "word": "予約",
+    "romaji": "yoyaku",
+    "translation": "Reservation",
+    "example_sentence": "飲食店の予約をお願いします。"
+  },
+  {
+    "id": 413,
+    "word": "キャンセル",
+    "romaji": "kyanseru",
+    "translation": "Cancellation",
+    "example_sentence": "都合が悪くなったので予約をキャンセルする。"
+  },
+  {
+    "id": 414,
+    "word": "案内",
+    "romaji": "annai",
+    "translation": "Guidance / Guide",
+    "example_sentence": "東京の街を観光案内しました。"
+  },
+  {
+    "id": 415,
+    "word": "地図",
+    "romaji": "chizu",
+    "translation": "Map",
+    "example_sentence": "地図を見ても場所が分かりません。"
+  },
+  {
+    "id": 416,
+    "word": "位置",
+    "romaji": "ichi",
+    "translation": "Position / Location",
+    "example_sentence": "現在の位置をGPSで確認する。"
+  },
+  {
+    "id": 417,
+    "word": "方向",
+    "romaji": "houkou",
+    "translation": "Direction",
+    "example_sentence": "進む方向を間違えてしまいました。"
+  },
+  {
+    "id": 418,
+    "word": "右",
+    "romaji": "migi",
+    "translation": "Right",
+    "example_sentence": "交差点を右に曲がってください。"
+  },
+  {
+    "id": 419,
+    "word": "左",
+    "romaji": "hidari",
+    "translation": "Left",
+    "example_sentence": "左側に大きなビルが見えます。"
+  },
+  {
+    "id": 420,
+    "word": "真っ直ぐ",
+    "romaji": "massugu",
+    "translation": "Straight ahead",
+    "example_sentence": "この道を真っ直ぐ進んでください。"
+  },
+  {
+    "id": 421,
+    "word": "北",
+    "romaji": "kita",
+    "translation": "North",
+    "example_sentence": "日本の北には北海道があります。"
+  },
+  {
+    "id": 422,
+    "word": "南",
+    "romaji": "minami",
+    "translation": "South",
+    "example_sentence": "南の島でバカンスを楽しみたい。"
+  },
+  {
+    "id": 423,
+    "word": "東",
+    "romaji": "higashi",
+    "translation": "East",
+    "example_sentence": "太陽は東から昇ります。"
+  },
+  {
+    "id": 424,
+    "word": "西",
+    "romaji": "nishi",
+    "translation": "West",
+    "example_sentence": "太陽が西の空に沈んでいく。"
+  },
+  {
+    "id": 425,
+    "word": "前",
+    "romaji": "mae",
+    "translation": "Front / Before",
+    "example_sentence": "駅の前で待ち合わせをしましょう。"
+  },
+  {
+    "id": 426,
+    "word": "後ろ",
+    "romaji": "ushiro",
+    "translation": "Behind / Back",
+    "example_sentence": "車の後ろの席に座りました。"
+  },
+  {
+    "id": 427,
+    "word": "上",
+    "romaji": "ue",
+    "translation": "Up / Above",
+    "example_sentence": "棚の上に本が置いてあります。"
+  },
+  {
+    "id": 428,
+    "word": "下",
+    "romaji": "shita",
+    "translation": "Down / Below",
+    "example_sentence": "机の下に猫が隠れています。"
+  },
+  {
+    "id": 429,
+    "word": "中",
+    "romaji": "naka",
+    "translation": "Inside / In",
+    "example_sentence": "カバンの箱の中に何がありますか？"
+  },
+  {
+    "id": 430,
+    "word": "外",
+    "romaji": "soto",
+    "translation": "Outside",
+    "example_sentence": "外は雨が激しく降っています。"
+  },
+  {
+    "id": 431,
+    "word": "隣",
+    "romaji": "tonari",
+    "translation": "Next to",
+    "example_sentence": "隣の部屋から物音が聞こえる。"
+  },
+  {
+    "id": 432,
+    "word": "近く",
+    "romaji": "chikaku",
+    "translation": "Near / Nearby",
+    "example_sentence": "家の近くにコンビニがあります。"
+  },
+  {
+    "id": 433,
+    "word": "遠く",
+    "romaji": "tooku",
+    "translation": "Far away",
+    "example_sentence": "遠くの空に鳥が飛んでいる。"
+  },
+  {
+    "id": 434,
+    "word": "間",
+    "romaji": "aida",
+    "translation": "Between",
+    "example_sentence": "A駅とB駅の間で電車が止まった。"
+  },
+  {
+    "id": 435,
+    "word": "向かい",
+    "romaji": "mukai",
+    "translation": "Opposite side",
+    "example_sentence": "書店の向かいにカフェがあります。"
+  },
+  {
+    "id": 436,
+    "word": "一",
+    "romaji": "ichi",
+    "translation": "One",
+    "example_sentence": "リンゴを一固買いました。"
+  },
+  {
+    "id": 437,
+    "word": "二",
+    "romaji": "ni",
+    "translation": "Two",
+    "example_sentence": "二人の子供が遊んでいます。"
+  },
+  {
+    "id": 438,
+    "word": "三",
+    "romaji": "san",
+    "translation": "Three",
+    "example_sentence": "三日間の旅行に出かけます。"
+  },
+  {
+    "id": 439,
+    "word": "四",
+    "romaji": "yon / shi",
+    "translation": "Four",
+    "example_sentence": "車輪が四つあります。"
+  },
+  {
+    "id": 440,
+    "word": "五",
+    "romaji": "go",
+    "translation": "Five",
+    "example_sentence": "指は片手に五本あります。"
+  },
+  {
+    "id": 441,
+    "word": "六",
+    "romaji": "roku",
+    "translation": "Six",
+    "example_sentence": "サイコロの目は六までです。"
+  },
+  {
+    "id": 442,
+    "word": "七",
+    "romaji": "nana / shichi",
+    "translation": "Seven",
+    "example_sentence": "一週間は七日あります。"
+  },
+  {
+    "id": 443,
+    "word": "八",
+    "romaji": "hachi",
+    "translation": "Eight",
+    "example_sentence": "タコの足は八本です。"
+  },
+  {
+    "id": 444,
+    "word": "九",
+    "romaji": "kyuu / ku",
+    "translation": "Nine",
+    "example_sentence": "九時に授業が始まります。"
+  },
+  {
+    "id": 445,
+    "word": "十",
+    "romaji": "juu",
+    "translation": "Ten",
+    "example_sentence": "十個ずつの束に分けます。"
+  },
+  {
+    "id": 446,
+    "word": "百",
+    "romaji": "hyaku",
+    "translation": "Hundred",
+    "example_sentence": "百円ショップで買い物をした。"
+  },
+  {
+    "id": 447,
+    "word": "千",
+    "romaji": "sen",
+    "translation": "Thousand",
+    "example_sentence": "千円札を一枚出しました。"
+  },
+  {
+    "id": 448,
+    "word": "万",
+    "romaji": "man",
+    "translation": "Ten thousand",
+    "example_sentence": "一万円の臨時収入がありました。"
+  },
+  {
+    "id": 449,
+    "word": "億",
+    "romaji": "oku",
+    "translation": "One hundred million",
+    "example_sentence": "宝くじで一億円当たりたい。"
+  },
+  {
+    "id": 450,
+    "word": "数え方",
+    "romaji": "kazoekata",
+    "translation": "Counter / Way of counting",
+    "example_sentence": "日本語の数え方は複雑です。"
+  },
+  {
+    "id": 451,
+    "word": "〜つ",
+    "romaji": "tsu",
+    "translation": "General counter for objects",
+    "example_sentence": "みかんを二つください。"
+  },
+  {
+    "id": 452,
+    "word": "〜個",
+    "romaji": "ko",
+    "translation": "Counter for small objects",
+    "example_sentence": "卵を三個使いました。"
+  },
+  {
+    "id": 453,
+    "word": "〜本",
+    "romaji": "hon",
+    "translation": "Counter for long/cylindrical objects",
+    "example_sentence": "ペンを二本貸してください。"
+  },
+  {
+    "id": 454,
+    "word": "〜枚",
+    "romaji": "mai",
+    "translation": "Counter for flat objects",
+    "example_sentence": "シャツを五枚洗いました。"
+  },
+  {
+    "id": 455,
+    "word": "〜冊",
+    "romaji": "satsu",
+    "translation": "Counter for books",
+    "example_sentence": "本を三冊買いました。"
+  },
+  {
+    "id": 456,
+    "word": "〜台",
+    "romaji": "dai",
+    "translation": "Counter for machines/vehicles",
+    "example_sentence": "車椅子を一台手配する。"
+  },
+  {
+    "id": 457,
+    "word": "〜人",
+    "romaji": "nin",
+    "translation": "Counter for people",
+    "example_sentence": "ここに五人の学生がいます。"
+  },
+  {
+    "id": 458,
+    "word": "〜匹",
+    "romaji": "hiki",
+    "translation": "Counter for small animals",
+    "example_sentence": "猫を二匹飼っています。"
+  },
+  {
+    "id": 459,
+    "word": "〜頭",
+    "romaji": "tou",
+    "translation": "Counter for large animals",
+    "example_sentence": "牛を十頭育てています。"
+  },
+  {
+    "id": 460,
+    "word": "〜羽",
+    "romaji": "wa",
+    "translation": "Counter for birds/rabbits",
+    "example_sentence": "鳥が三羽飛んでいきました。"
+  },
+  {
+    "id": 461,
+    "word": "赤",
+    "romaji": "aka",
+    "translation": "Red",
+    "example_sentence": "赤いリンゴを剥きました。"
+  },
+  {
+    "id": 462,
+    "word": "青",
+    "romaji": "ao",
+    "translation": "Blue",
+    "example_sentence": "青い空がどこまでも続く。"
+  },
+  {
+    "id": 463,
+    "word": "白",
+    "romaji": "shiro",
+    "translation": "White",
+    "example_sentence": "白いシャツを着ています。"
+  },
+  {
+    "id": 464,
+    "word": "黒",
+    "romaji": "kuro",
+    "translation": "Black",
+    "example_sentence": "黒い猫が道を横切った。"
+  },
+  {
+    "id": 465,
+    "word": "黄色",
+    "romaji": "kiiro",
+    "translation": "Yellow",
+    "example_sentence": "黄色い菜の畑が広がる。"
+  },
+  {
+    "id": 466,
+    "word": "緑",
+    "romaji": "midori",
+    "translation": "Green",
+    "example_sentence": "新緑の木々が美しいです。"
+  },
+  {
+    "id": 467,
+    "word": "紫",
+    "romaji": "murasaki",
+    "translation": "Purple",
+    "example_sentence": "高貴な色としての紫。"
+  },
+  {
+    "id": 468,
+    "word": "オレンジ",
+    "romaji": "orenji",
+    "translation": "Orange",
+    "example_sentence": "オレンジ色の夕焼け。"
+  },
+  {
+    "id": 469,
+    "word": "ピンク",
+    "romaji": "pinku",
+    "translation": "Pink",
+    "example_sentence": "ピンクの桜の花びら。"
+  },
+  {
+    "id": 470,
+    "word": "茶色",
+    "romaji": "chairo",
+    "translation": "Brown",
+    "example_sentence": "茶色の革靴を買いました。"
+  },
+  {
+    "id": 471,
+    "word": "灰色",
+    "romaji": "haiiro",
+    "translation": "Gray",
+    "example_sentence": "灰色に曇った冬の空。"
+  },
+  {
+    "id": 472,
+    "word": "金",
+    "romaji": "kin",
+    "translation": "Gold",
+    "example_sentence": "オリンピックで金メダルを取る。"
+  },
+  {
+    "id": 473,
+    "word": "銀",
+    "romaji": "gin",
+    "translation": "Silver",
+    "example_sentence": "ピカピカの銀のスプーン。"
+  },
+  {
+    "id": 474,
+    "word": "カラフル",
+    "romaji": "karafuru",
+    "translation": "Colorful",
+    "example_sentence": "カラフルな絵の具で描く。"
+  },
+  {
+    "id": 475,
+    "word": "透明",
+    "romaji": "toumei",
+    "translation": "Transparent",
+    "example_sentence": "透明なガラスのコップ。"
+  },
+  {
+    "id": 476,
+    "word": "形",
+    "romaji": "katachi",
+    "translation": "Shape / Form",
+    "example_sentence": "面白い形をした雲がある。"
+  },
+  {
+    "id": 477,
+    "word": "丸",
+    "romaji": "maru",
+    "translation": "Circle",
+    "example_sentence": "正解のところに丸をつける。"
+  },
+  {
+    "id": 478,
+    "word": "四角",
+    "romaji": "shikaku",
+    "translation": "Square / Rectangle",
+    "example_sentence": "四角い箱に荷物を詰める。"
+  },
+  {
+    "id": 479,
+    "word": "三角",
+    "romaji": "sankaku",
+    "translation": "Triangle",
+    "example_sentence": "三角コーンが置いてあります。"
+  },
+  {
+    "id": 480,
+    "word": "直線",
+    "romaji": "chokusen",
+    "translation": "Straight line",
+    "example_sentence": "定規で直線を引きます。"
+  },
+  {
+    "id": 481,
+    "word": "曲線",
+    "romaji": "kyokusen",
+    "translation": "Curve",
+    "example_sentence": "美しい曲線を描くデザイン。"
+  },
+  {
+    "id": 482,
+    "word": "大きい",
+    "romaji": "ookii",
+    "translation": "Big / Large",
+    "example_sentence": "大きな声で挨拶をします。"
+  },
+  {
+    "id": 483,
+    "word": "小さい",
+    "romaji": "chiisai",
+    "translation": "Small / Little",
+    "example_sentence": "小さなミスも油断できません。"
+  },
+  {
+    "id": 484,
+    "word": "長い",
+    "romaji": "nagai",
+    "translation": "Long",
+    "example_sentence": "長い髪をバッサリ切りました。"
+  },
+  {
+    "id": 485,
+    "word": "短い",
+    "romaji": "mijikai",
+    "translation": "Short",
+    "example_sentence": "短い期間でしたが楽しかった。"
+  },
+  {
+    "id": 486,
+    "word": "太い",
+    "romaji": "futoi",
+    "translation": "Thick / Fat",
+    "example_sentence": "太いマジックペンで書きます。"
+  },
+  {
+    "id": 487,
+    "word": "細い",
+    "romaji": "hosoi",
+    "translation": "Thin / Slender",
+    "example_sentence": "彼女は足が細くてスタイルが良い。"
+  },
+  {
+    "id": 488,
+    "word": "厚い",
+    "romaji": "atsui",
+    "translation": "Thick (flat objects)",
+    "example_sentence": "厚いステーキ肉を焼く。"
+  },
+  {
+    "id": 489,
+    "word": "薄い",
+    "romaji": "usui",
+    "translation": "Thin / Pale / Weak (taste)",
+    "example_sentence": "このスープは味が薄いです。"
+  },
+  {
+    "id": 490,
+    "word": "深い",
+    "romaji": "fukai",
+    "translation": "Deep",
+    "example_sentence": "このプールは水深が深いです。"
+  },
+  {
+    "id": 491,
+    "word": "浅い",
+    "romaji": "asai",
+    "translation": "Shallow",
+    "example_sentence": "浅い川なので歩いて渡れます。"
+  },
+  {
+    "id": 492,
+    "word": "固い",
+    "romaji": "katai",
+    "translation": "Hard / Firm",
+    "example_sentence": "このパンは少し固いですね。"
+  },
+  {
+    "id": 493,
+    "word": "柔らかい",
+    "romaji": "yawarakai",
+    "translation": "Soft / Tender",
+    "example_sentence": "柔らかいお肉で美味しいです。"
+  },
+  {
+    "id": 494,
+    "word": "重い",
+    "romaji": "omoi",
+    "translation": "Heavy",
+    "example_sentence": "責任が重い仕事を引き受ける。"
+  },
+  {
+    "id": 495,
+    "word": "軽い",
+    "romaji": "karui",
+    "translation": "Light",
+    "example_sentence": "軽い気持ちで引き受けてしまった。"
+  },
+  {
+    "id": 496,
+    "word": "挨拶",
+    "romaji": "aisatsu",
+    "translation": "Greeting",
+    "example_sentence": "毎日大きな声で挨拶をします。"
+  },
+  {
+    "id": 497,
+    "word": "ありがとう",
+    "romaji": "arigatou",
+    "translation": "Thank you",
+    "example_sentence": "手伝ってくれてありがとう。"
+  },
+  {
+    "id": 498,
+    "word": "すみません",
+    "romaji": "sumimasen",
+    "translation": "Excuse me / Sorry",
+    "example_sentence": "遅れてしまってすみません。"
+  },
+  {
+    "id": 499,
+    "word": "さようなら",
+    "romaji": "sayounara",
+    "translation": "Goodbye",
+    "example_sentence": "先生、さようなら。また明日。"
+  },
+  {
+    "id": 500,
+    "word": "初めまして",
+    "romaji": "hajimemashite",
+    "translation": "Nice to meet you",
+    "example_sentence": "初めまして、田中と申します。"
+  }
+]
