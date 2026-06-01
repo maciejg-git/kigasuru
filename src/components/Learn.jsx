@@ -43,7 +43,6 @@ export default function Learn({ newCardsProp, reviewCardsProp, onCardDataUpdate,
 
   function handleReviewedClick(rating) {
     let updatedCardData = onCardDataUpdate(card.id, "reviewed", rating);
-    console.log(new Date(updatedCardData.due));
 
     let nextLearnCards = [...learnCards];
     let nextNewCards = [...newCards];

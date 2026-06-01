@@ -5,14 +5,14 @@ import Deck from "./components/Deck";
 import Options from "./components/Options";
 import Navbar from "./components/Navbar";
 import Modal from "./components/Modal";
-import CardEdit from "./components/CardEdit.jsx"
 import "./App.css";
-import { calculateLearnCards } from "./srs";
+import { getLearnCards } from "./srs";
 import { OptionsContext } from "./options-context";
 import { DateContext } from "./date-context";
 import { motion } from "motion/react";
 import { createEmptyCard, fsrs, Rating } from "ts-fsrs";
-import data500 from "./data/data500.json"
+import data500 from "./data/data500.json";
+import { differenceInCalendarDays, startOfDay } from "date-fns";
 
 const defaultOptions = {
   newCards: 5,
@@ -33,6 +33,11 @@ const defaultCardData = {
   fsrs: createEmptyCard(),
 };
 
+const defaultLastLearn = {
+  date: null,
+  newCards: 0,
+};
+
 let debug = false;
 
 function App() {
@@ -46,16 +51,29 @@ function App() {
   });
   let currentSrsData = useRef([]);
   let deckSrsData = useRef(JSON.parse(localStorage.getItem("deckSrsData")) || {});
-  let lastLearn = useRef(JSON.parse(localStorage.getItem("deckSrsData")) || null)
+  let lastLearn = useRef(JSON.parse(localStorage.getItem("lastLearn"), (key, value) => {
+  if (key === "date" && value) {
+    return new Date(value);
+  }
+  return value;
+}) || defaultLastLearn);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
   const scheduler = useRef(fsrs());
   const [, forceUpdate] = useState(0);
-  const [today, setToday] = useState(new Date())
+  const [today, setToday] = useState(new Date());
 
   useEffect(() => {
     localStorage.setItem("deck", JSON.stringify(deck));
   }, [deck]);
+
+  function getNewCardLimitForDay() {
+    let last = lastLearn.current.date;
+
+    return last && differenceInCalendarDays(startOfDay(today), startOfDay(last)) >= 1
+      ? options.newCards
+      : options.newCards - lastLearn.current.newCards;
+  }
 
   function handleClickDarkMode() {
     if (!darkMode) {
@@ -67,38 +85,37 @@ function App() {
   }
 
   function getCardData(cardId) {
-    let cardData = currentSrsData.current[cardId] ||
-      deckSrsData.current[cardId]
+    let cardData = currentSrsData.current[cardId] || deckSrsData.current[cardId];
     if (!cardData) {
-      cardData = {...defaultCardData}
-      deckSrsData.current[cardId] = cardData
+      cardData = { ...defaultCardData };
+      deckSrsData.current[cardId] = cardData;
     }
-    return cardData
+    return cardData;
   }
 
   function handleClickStart() {
-    let [newCards, reviewCards] = calculateLearnCards(
+    let newCardsLimit = getNewCardLimitForDay()
+
+    let [newCards, learningCards, reviewCards] = getLearnCards(
       deck.cards,
       deckSrsData.current,
       today,
-      options.newCards,
+      newCardsLimit,
     );
-    if (!newCards.length && !reviewCards.length) {
+
+    if (!newCards.length && !learningCards.length && !reviewCards.length) {
       return;
     }
+
     setNewCards(newCards);
     setReviewCards(reviewCards);
     setPage("learn");
   }
 
   function handleCardDataUpdate(cardId, action, details) {
-    let cardData = getCardData(cardId)
+    let cardData = getCardData(cardId);
 
-    const { card, log } = scheduler.current.next(
-      cardData.fsrs,
-      today,
-      Rating[details]
-    );
+    const { card, log } = scheduler.current.next(cardData.fsrs, today, Rating[details]);
     cardData.fsrs = { ...card };
 
     currentSrsData.current[cardId] = cardData;
@@ -111,8 +128,8 @@ function App() {
     currentSrsData.current = [];
     setPage("home");
     localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
-    lastLearn.current = today
-    localStorage.setItem("lastLearn", lastLearn.current.toISOString());
+    lastLearn.current = { date: today, newCards: options.newCards };
+    localStorage.setItem("lastLearn", JSON.stringify(lastLearn.current));
   }
 
   function handleClickDeck() {
@@ -120,18 +137,18 @@ function App() {
   }
 
   function handleSuspendCards(cardId) {
-    let cardData = getCardData(cardId)
-    cardData.suspended = !cardData.suspended
+    let cardData = getCardData(cardId);
+    cardData.suspended = !cardData.suspended;
     localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
     forceUpdate((t) => t + 1);
   }
 
   function handleResetCards(cardsId) {
-    let ids = [...cardsId]
+    let ids = [...cardsId];
     ids.forEach((id) => {
-      let cardData = {...defaultCardData}
+      let cardData = { ...defaultCardData };
       deckSrsData.current[id] = cardData;
-    })
+    });
     localStorage.setItem("deckSrsData", JSON.stringify(deckSrsData.current));
     forceUpdate((t) => t + 1);
   }
@@ -171,7 +188,7 @@ function App() {
               <motion.div className="content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <Deck
                   deck={deck}
-                  deckSrsData={{...deckSrsData}}
+                  deckSrsData={{ ...deckSrsData }}
                   onCardDataUpdate={handleCardDataUpdate}
                   setModalOpen={setModalOpen}
                   setModalData={setModalData}
@@ -179,9 +196,6 @@ function App() {
                   onReset={handleResetCards}
                 ></Deck>
               </motion.div>
-            )}
-            {page === "edit" && (
-              <CardEdit></CardEdit>
             )}
             {page === "options" && (
               <motion.div className="content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -194,7 +208,22 @@ function App() {
 
         {debug && (
           <div className="fixed left-0 top-20 flex flex-col">
-            <button onClick={() => localStorage.removeItem("deckSrsData")}>delete deck data</button>
+            <button
+              className="border border-gray-800 rounded-lg p-2"
+              onClick={() => {
+                localStorage.removeItem("deckSrsData");
+                localStorage.removeItem("lastLearn");
+                window.location.reload();
+              }}
+            >
+              delete deck data
+            </button>
+            <input
+              type="date"
+              value={today.toISOString().substring(0, 10)}
+              onChange={(e) => setToday(new Date(e.target.value))}
+              className="border border-gray-800 rounded-lg p-2"
+            />
           </div>
         )}
       </div>
