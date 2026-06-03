@@ -6,24 +6,37 @@ import { useKeyboard } from "../hooks/use-keyboard.js";
 import { State } from "ts-fsrs";
 import LearnMoreDropdown from "./LearnMoreDropdown.jsx";
 
-export default function Learn({ newCardsProp, reviewCardsProp, onCardDataUpdate, onLearnFinish }) {
+let logCard = (card, prevState, nextState, due) => {
+  let states = {
+    [State.New]: "New",
+    [State.Learning]: "Learning",
+    [State.Review]: "Review",
+    [State.Relearning]: "Relearning",
+  }
+  console.log(`Card: ${card.romaji}
+    Prev State ${states[prevState]}
+    Next State ${states[nextState]}
+    Due ${due}
+  `)
+}
+
+export default function Learn({ newCardsProp, reviewCardsProp, learningCardsProp, onCardDataUpdate, onLearnFinish }) {
   const [showAnswer, setShowAnswer] = useState(false);
-  const [learnCards, setLearnCards] = useState([]);
   const [newCards, setNewCards] = useState(() => {
-    if (newCardsProp.length > 0) {
-      return [...newCardsProp].slice(1);
-    }
     return [...newCardsProp];
   });
+  const [learnCards, setLearnCards] = useState(() => {
+    return [...learningCardsProp].map((i) => ({card: i}))
+  });
   const [reviewCards, setReviewCards] = useState(() => {
-    if (newCardsProp.length > 0) {
-      return [...reviewCardsProp];
-    }
-    return [...reviewCardsProp].slice(1);
+    return [...reviewCardsProp]
   });
   const [card, setCard] = useState(() => {
     if (newCardsProp.length > 0) {
       return newCardsProp[0];
+    }
+    if (learningCardsProp.length > 0) {
+      return learningCardsProp[0];
     }
     return reviewCardsProp[0];
   });
@@ -41,51 +54,55 @@ export default function Learn({ newCardsProp, reviewCardsProp, onCardDataUpdate,
     onKeyPressed: () => handleKeyboard("1"),
   });
 
-  function handleReviewedClick(rating) {
-    let updatedCardData = onCardDataUpdate(card.id, "reviewed", rating);
+  function getNextCard(newCards, learnCards, reviewCards) {
+    let dueCard = learnCards.find((c) => {
+      let now = new Date()
+      // now.setMinutes(now.getMinutes() + 9, now.getSeconds() + 50);
+      return c.due < now;
+    })
+    if (dueCard) {
+      return dueCard.card
+    }
 
-    let nextLearnCards = [...learnCards];
-    let nextNewCards = [...newCards];
-    let nextReviewCards = [...reviewCards];
+    if (newCards.length) {
+      return newCards[0];
+    }
+
+    if (learnCards.length) {
+      return learnCards[0].card;
+    }
+
+    if (reviewCards.length) {
+      return reviewCards[0];
+    }
+
+    return null
+  }
+
+  function handleReviewedClick(rating) {
+    let [updatedCardData, prevState] = onCardDataUpdate(card.id, "reviewed", rating);
+
+    let nextNewCards = prevState === State.New ? newCards.slice(1) : newCards
+    let nextLearnCards = prevState === State.Learning ? learnCards.filter((c) => c.card.id !== card.id) : learnCards
+    let nextReviewCards = prevState === State.Review ? reviewCards.slice(1) : reviewCards
 
     if (updatedCardData.state === State.Learning) {
       nextLearnCards.push({ card, due: updatedCardData.due });
-      setLearnCards(nextLearnCards);
     }
 
-    if (nextLearnCards.length) {
-      let foundCard =
-        nextLearnCards.find((c) => {
-          return c.due < new Date().getTime();
-        }) ||
-        (nextNewCards.length === 0 && nextLearnCards[0]);
+    logCard(card, prevState, updatedCardData.state, updatedCardData.due)
 
-      if (foundCard) {
-        setCard(foundCard.card);
-        nextLearnCards = nextLearnCards.filter((c) => c !== foundCard);
-        setLearnCards(nextLearnCards);
+    setNewCards(nextNewCards)
+    setLearnCards(nextLearnCards)
+    setReviewCards(nextReviewCards)
+    setShowAnswer(false);
 
-        setShowAnswer(false);
-        return;
-      }
-    }
+    let nextCard = getNextCard(nextNewCards, nextLearnCards, nextReviewCards)
 
-    if (nextNewCards.length) {
-      setCard(nextNewCards[0]);
-      setNewCards(nextNewCards.slice(1));
-      setShowAnswer(false);
-      return;
-    }
-
-    if (nextReviewCards.length) {
-      setCard(nextReviewCards[0]);
-      setReviewCards(nextReviewCards.slice(1));
-      setShowAnswer(false);
-      return;
-    }
-
-    if (!nextNewCards.length && !nextLearnCards.length && !nextReviewCards.length) {
-      onLearnFinish();
+    if (nextCard) {
+      setCard(nextCard)
+    } else {
+      onLearnFinish()
     }
   }
 
